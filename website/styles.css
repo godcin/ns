@@ -73,7 +73,7 @@ h3 { font-size: 18px; line-height: 1.5; font-weight: 600; }
 .demo-tabs button span { font-size: 11px; opacity: 0.8; }
 .demo-tabs button:hover { color: var(--text); }
 .demo-tabs button[aria-selected="true"] { background: var(--accent-soft); color: #d8c4ff; }
-.demo-tabs button[data-demo-tab="dev"][aria-selected="true"], .demo-tabs button[data-demo-tab="coding"][aria-selected="true"] { background: rgba(157, 188, 234, 0.12); color: var(--dev); }
+.demo-tabs button[data-demo-tab="dev"][aria-selected="true"], .demo-tabs button[data-demo-tab="coding"][aria-selected="true"], .demo-tabs button[data-demo-tab="review"][aria-selected="true"] { background: rgba(157, 188, 234, 0.12); color: var(--dev); }
 .demo-carousel-arrows { display: flex; gap: 8px; }
 .carousel-viewport { overflow: hidden; touch-action: pan-y pinch-zoom; transition: height 300ms ease; }
 .demo-carousel-track { display: flex; align-items: flex-start; width: 100%; transition: transform 300ms ease; }
@@ -333,6 +333,12 @@ dialog img { width: 100%; height: auto; }
   .site-footer > .text-link { margin-left: auto; }
   dialog { width: calc(100vw - 20px); max-height: calc(100dvh - 20px); }
   .dialog-toolbar { padding: 8px 10px; font-size: 10px; }
+}
+@media (max-width: 480px) {
+  .demo-carousel-controls { flex-wrap: wrap; gap: 12px; }
+  .demo-tabs { flex-basis: 100%; }
+  .demo-tabs button { height: 40px; }
+  .demo-carousel-arrows { margin-left: auto; }
 }
 @media (max-width: 360px) {
   .content-width, .header-inner { width: calc(100% - 32px); }

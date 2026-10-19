@@ -85,6 +85,7 @@
               <button id="demo-tab-pm" role="tab" type="button" aria-selected="true" aria-controls="demo-slide-pm" data-demo-tab="pm">PM<span>产品</span></button>
               <button id="demo-tab-dev" role="tab" type="button" aria-selected="false" aria-controls="demo-slide-dev" data-demo-tab="dev" tabindex="-1">Dev<span>设计</span></button>
               <button id="demo-tab-coding" role="tab" type="button" aria-selected="false" aria-controls="demo-slide-coding" data-demo-tab="coding" tabindex="-1">Dev<span>编码</span></button>
+              <button id="demo-tab-review" role="tab" type="button" aria-selected="false" aria-controls="demo-slide-review" data-demo-tab="review" tabindex="-1">Dev<span>评审</span></button>
             </div>
             <div class="demo-carousel-arrows">
               <button class="icon-button" type="button" data-demo-prev aria-label="上一个流程演示" title="上一个流程演示"><i data-lucide="chevron-left" aria-hidden="true"></i></button>
@@ -266,6 +267,72 @@
                   </li>
                 </ol>
               </article>
+              <article class="demo-carousel-slide" id="demo-slide-review" data-demo-slide="review" role="tabpanel" aria-labelledby="demo-tab-review" aria-hidden="true" inert>
+                <div class="desktop-journey-heading">
+                  <div>
+                    <p class="section-label">NORTHSTAR DESKTOP / CODE REVIEW WORKFLOW</p>
+                    <h2 id="review-journey-title">Dev 代码评审演示视频</h2>
+                  </div>
+                  <p>接续 media-harbor 的编码验收，<br class="desktop-break">从评审发现问题、确认技术决策，到修复验收、研发签核与移交 QA。</p>
+                </div>
+                <figure class="desktop-session">
+                  <a class="desktop-session-frame pm-video-preview" href="https://www.bilibili.com/video/BV1chnJ6jEdZ/" target="_blank" rel="noopener noreferrer" aria-label="在 B 站观看 Northstar Dev 代码评审演示视频">
+                    <img src="assets/video/dev-code-review-poster.webp" width="1920" height="1080" alt="Northstar Desktop 真实录像中的代码评审问题确认卡：查看证据、确认技术方案并提交决策" loading="lazy">
+                    <span class="video-play"><i data-lucide="play" aria-hidden="true"></i></span>
+                  </a>
+                  <figcaption>
+                    <span class="demo-context"><span class="status-dot" aria-hidden="true"></span>Northstar Desktop <span class="caption-divider">/</span> Dev · 代码评审</span>
+                    <a class="text-link" href="https://www.bilibili.com/video/BV1chnJ6jEdZ/" target="_blank" rel="noopener noreferrer">在 B 站观看 · 44:31<i data-lucide="external-link" aria-hidden="true"></i></a>
+                  </figcaption>
+                </figure>
+                <ol class="pm-chapters" aria-label="Dev 代码评审与签核视频章节">
+                  <li>
+                    <a class="chapter-seek" href="https://www.bilibili.com/video/BV1chnJ6jEdZ/?t=0" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 00:00 观看：发起代码评审" title="发起代码评审"><i data-lucide="play" aria-hidden="true"></i><span>00:00</span></a>
+                    <h3>发起代码评审</h3>
+                    <p>承接编码验收结果进入代码评审，查看分批检查的进度、问题依据与处理建议。</p>
+                  </li>
+                  <li>
+                    <a class="chapter-seek" href="https://www.bilibili.com/video/BV1chnJ6jEdZ/?t=260" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 04:20 观看：首轮问题修复" title="首轮问题修复"><i data-lucide="play" aria-hidden="true"></i><span>04:20</span></a>
+                    <h3>首轮问题修复</h3>
+                    <p>评审发现实现问题后回到 Agent 工作台，修复代码并执行检查，持续展示修改与验证进度。</p>
+                  </li>
+                  <li>
+                    <a class="chapter-seek" href="https://www.bilibili.com/video/BV1chnJ6jEdZ/?t=1095" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 18:15 观看：确认开发技术决策" title="确认开发技术决策"><i data-lucide="play" aria-hidden="true"></i><span>18:15</span></a>
+                    <h3>确认开发技术决策</h3>
+                    <p>对需要技术取舍的问题，查看证据和建议方案；确认两项决策后，将选择写入评审记录。</p>
+                  </li>
+                  <li>
+                    <a class="chapter-seek" href="https://www.bilibili.com/video/BV1chnJ6jEdZ/?t=1170" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 19:30 观看：按确认方案继续修复" title="按确认方案继续修复"><i data-lucide="play" aria-hidden="true"></i><span>19:30</span></a>
+                    <h3>按确认方案继续修复</h3>
+                    <p>带着已记录的技术决策回到编码工作台，继续处理评审问题，并补充相应的回归检查。</p>
+                  </li>
+                  <li>
+                    <a class="chapter-seek" href="https://www.bilibili.com/video/BV1chnJ6jEdZ/?t=1520" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 25:20 观看：运行并体验修复结果" title="运行并体验修复结果"><i data-lucide="play" aria-hidden="true"></i><span>25:20</span></a>
+                    <h3>运行并体验修复结果</h3>
+                    <p>打开本地 Media Harbor，选择素材目录、浏览图片并操作待打印收集，检查修复后的使用效果。</p>
+                  </li>
+                  <li>
+                    <a class="chapter-seek" href="https://www.bilibili.com/video/BV1chnJ6jEdZ/?t=1635" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 27:15 观看：定位验收失败并修复" title="定位验收失败并修复"><i data-lucide="play" aria-hidden="true"></i><span>27:15</span></a>
+                    <h3>定位验收失败并修复</h3>
+                    <p>验收遇到启动与状态检查失败，Agent 排查端口占用，继续处理运行异常并重新验证。</p>
+                  </li>
+                  <li>
+                    <a class="chapter-seek" href="https://www.bilibili.com/video/BV1chnJ6jEdZ/?t=2460" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 41:00 观看：验收通过，确认修复结果" title="验收通过，确认修复结果"><i data-lucide="play" aria-hidden="true"></i><span>41:00</span></a>
+                    <h3>验收通过，确认修复结果</h3>
+                    <p>修复通过 Northstar 验收后回到代码评审，核对当前代码版本与十一项必修问题的修复结果。</p>
+                  </li>
+                  <li>
+                    <a class="chapter-seek" href="https://www.bilibili.com/video/BV1chnJ6jEdZ/?t=2586" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 43:06 观看：完成 Dev 研发签核" title="完成 Dev 研发签核"><i data-lucide="play" aria-hidden="true"></i><span>43:06</span></a>
+                    <h3>完成 Dev 研发签核</h3>
+                    <p>确认修复结果后完成研发签核，记录技术设计的签核基线，为后续交接保留明确依据。</p>
+                  </li>
+                  <li>
+                    <a class="chapter-seek" href="https://www.bilibili.com/video/BV1chnJ6jEdZ/?t=2640" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 44:00 观看：移交 QA 测试计划" title="移交 QA 测试计划"><i data-lucide="play" aria-hidden="true"></i><span>44:00</span></a>
+                    <h3>移交 QA 测试计划</h3>
+                    <p>确认切换到 QA，进入测试计划阶段，下一步同步测试计划，继续承接需求与设计。</p>
+                  </li>
+                </ol>
+              </article>
             </div>
           </div>
         </div>
@@ -315,7 +382,7 @@
             <li><span class="step-number">05</span><i data-lucide="flag" aria-hidden="true"></i><h3>发布与复盘</h3><p>核对发布与恢复准备，<br>记录结果和后续改进。</p><span class="step-role role-shared">PM · Dev · QA</span><span class="step-status">实验性</span></li>
           </ol>
           <div class="workflow-note"><i data-lucide="arrow-right-left" aria-hidden="true"></i><p>需求有异议，回到产品确认；测试发现缺陷，交回开发修复。<span>协作不止向前，也能有依据地返回。</span></p></div>
-          <p class="workflow-scope">公开视频展示 PM 从需求调研到 PRD 签核、Dev 从技术调研到实现步骤确认，以及 AI 编码、体验修复、编码验收通过并衔接代码评审。编码录像止于提交代码评审入口；Dev 签核、QA、缺陷修复、发布与复盘流程仍为实验性能力，正在持续验证与完善。</p>
+          <p class="workflow-scope">四段真实录像串联需求调研、技术设计、AI 编码与代码评审，展示问题确认、修复验收、研发签核及移交 QA。最新录像止于 QA 测试计划入口；Dev 签核及后续 QA、缺陷修复、发布与复盘流程仍在持续验证与完善，保留实验性标记。</p>
         </div>
       </section>
 

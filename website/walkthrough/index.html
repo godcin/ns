@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d0e11">
+  <title>图文演示 · 一个需求的研发历程 · Northstar</title>
+  <meta name="description" content="约 5 分钟，12 张真实 Desktop 截图。跟着家庭影像管理项目，看 Northstar 如何从需求确认、技术设计、编码体验，走到评审签核与 QA 交接。">
+  <link rel="canonical" href="https://godcin.com/walkthrough/">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Northstar">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:title" content="12 张图，看懂 Northstar 如何推进一个需求">
+  <meta property="og:description" content="从需求调研到评审签核，用真实截图看清每一步如何推进、哪里需要你来决定。约 5 分钟读完。">
+  <meta property="og:url" content="https://godcin.com/walkthrough/">
+  <meta property="og:image" content="https://godcin.com/assets/northstar-share-f0084951f0eb.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Northstar Desktop 真实产品会话">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="12 张图，看懂 Northstar 如何推进一个需求">
+  <meta name="twitter:description" content="从需求确认、技术设计与编码体验，到评审签核与 QA 交接。约 5 分钟读完。">
+  <meta name="twitter:image" content="https://godcin.com/assets/northstar-share-f0084951f0eb.jpg">
+  <link rel="icon" href="../favicon.ico" sizes="32x32" type="image/x-icon">
+  <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="walkthrough.css">
+  <script src="../vendor/lucide.min.js" defer></script>
+  <script src="walkthrough.js" defer></script>
+</head>
+<body class="story-page">
+  <a class="skip-link" href="#main">跳转到正文</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../" aria-label="Northstar 首页"><span class="brand-mark" aria-hidden="true"><i data-lucide="sparkles"></i></span><span>Northstar</span></a>
+      <nav class="desktop-nav" aria-label="主导航"><a href="../product/">产品介绍</a><a href="./" aria-current="page">图文演示</a><a href="../#desktop-journey">视频演示</a><a href="../">返回首页</a></nav>
+      <button class="icon-button menu-toggle" type="button" aria-label="展开导航" aria-controls="mobile-nav" aria-expanded="false" hidden><i data-lucide="menu" aria-hidden="true"></i></button>
+    </div>
+    <nav id="mobile-nav" class="mobile-nav" aria-label="移动端导航" hidden><a href="../product/">产品介绍</a><a href="./" aria-current="page">图文演示</a><a href="../#desktop-journey">视频演示</a><a href="../">返回首页</a></nav>
+  </header>
+  <main id="main">
+    <div class="content-width">
+      <header class="story-hero">
+        <p class="section-label">NORTHSTAR IN PRACTICE / 图文演示</p>
+        <h1>一个需求，<br>从想法走到研发交接</h1>
+        <p class="story-lead">跟着家庭影像管理项目 media-harbor，看看人和 Agent 如何一起澄清需求、完成设计、编写代码，再处理评审问题。12 张真实截图，把这段研发历程讲清楚。</p>
+        <div class="story-meta"><span><i data-lucide="clock-3" aria-hidden="true"></i>约 5 分钟阅读</span><span><i data-lucide="images" aria-hidden="true"></i>4 个阶段 · 12 张实录截图</span><span>点击图片可放大</span></div>
+      </header>
+      <div class="story-context">
+        <div><h2>这次要做什么</h2><p>一个在浏览器中管理家庭照片和视频的工具：<strong>读取本地素材、按日期浏览、挑选照片放入待打印集合。</strong></p></div>
+        <div><h2>这条流程里，谁来做什么</h2><p>Agent 协助调研、设计、实现与检查；<strong>人确认范围、反馈体验、核对结果并签核。</strong>系统记录版本、状态与交接依据。</p></div>
+      </div>
+    </div>
+    <nav class="stage-nav" aria-label="图文演示阶段"><ol class="content-width"><li><a href="#pm"><span>01</span>确认需求</a></li><li><a href="#design"><span>02</span>技术设计</a></li><li><a href="#coding"><span>03</span>编码体验</a></li><li><a href="#review"><span>04</span>评审签核</a></li></ol></nav>
+    <div class="content-width">
+      <section class="story-stage" id="pm" data-stage="pm" aria-labelledby="pm-title">
+        <div class="stage-heading"><div><p class="section-label">01 / PM · 产品需求</p><h2 id="pm-title">先把“要做什么”说清楚</h2></div><p>从想法到可评审的需求文档，再由人确认交给开发的版本。</p></div>
+        <article class="story-step" id="step-01" aria-labelledby="step-01-title">
+          <div class="step-copy">
+            <p class="step-kicker">STEP 01 / 12</p>
+            <h3 id="step-01-title">把模糊的想法，变成可确认的范围</h3>
+            <p>想做一个家庭影像管理工具，先从哪里开始？Agent 把调研拆成确认卡，用户补充“只需要基础能力，通过浏览器使用”，让方案围绕实际需要展开。</p>
+            <dl><div><dt>你来决定</dt><dd>认可、补充或修改调研发现，明确第一版的边界。</dd></div><div><dt>这一步留下</dt><dd>可继续确认的调研记录，供后续 PRD 使用。</dd></div></dl>
+          </div>
+          <figure class="story-shot">
+            <a class="shot-link" href="../assets/walkthrough/pm-research.webp" target="_blank" rel="noopener" data-caption="01 · 把模糊的想法，变成可确认的范围" aria-label="放大截图：把模糊的想法，变成可确认的范围">
+              <img src="../assets/walkthrough/pm-research.webp" width="1662" height="1044" alt="画面中正在补充需求边界，尚待提交确认。" loading="eager" decoding="async">
+              <span class="shot-zoom"><i data-lucide="expand" aria-hidden="true"></i>放大截图</span>
+            </a>
+            <figcaption><span>画面中正在补充需求边界，尚待提交确认。</span><a class="text-link" href="https://www.bilibili.com/video/BV1XupR6NEgL/?t=600" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 10:00 观看：把模糊的想法，变成可确认的范围">原片 10:00<i data-lucide="external-link" aria-hidden="true"></i></a></figcaption>
+          </figure>
+        </article>
+        <article class="story-step" id="step-02" aria-labelledby="step-02-title">
+          <div class="step-copy">
+            <p class="step-kicker">STEP 02 / 12</p>
+            <h3 id="step-02-title">把讨论整理成一份 PRD</h3>
+            <p>确认过的调研进入产品需求文档（PRD）。背景目标、用户场景、功能范围与验收标准有了共同的落点，可以一起检查遗漏和矛盾。</p>
+            <dl><div><dt>你来核对</dt><dd>目标、范围和验收标准是否符合最初的想法。</dd></div><div><dt>这一步留下</dt><dd>可查看、评审与修订的 PRD 草稿。</dd></div></dl>
+          </div>
+          <figure class="story-shot">
+            <a class="shot-link" href="../assets/walkthrough/pm-prd.webp" target="_blank" rel="noopener" data-caption="02 · 把讨论整理成一份 PRD" aria-label="放大截图：把讨论整理成一份 PRD">
+              <img src="../assets/walkthrough/pm-prd.webp" width="1662" height="1044" alt="真实 PRD 文档：背景与目标、用户、场景及范围。" loading="lazy" decoding="async">
+              <span class="shot-zoom"><i data-lucide="expand" aria-hidden="true"></i>放大截图</span>
+            </a>
+            <figcaption><span>真实 PRD 文档：背景与目标、用户、场景及范围。</span><a class="text-link" href="https://www.bilibili.com/video/BV1XupR6NEgL/?t=1200" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 20:00 观看：把讨论整理成一份 PRD">原片 20:00<i data-lucide="external-link" aria-hidden="true"></i></a></figcaption>
+          </figure>
+        </article>
+        <article class="story-step" id="step-03" aria-labelledby="step-03-title">
+          <div class="step-copy">
+            <p class="step-kicker">STEP 03 / 12</p>
+            <h3 id="step-03-title">评审修订后，确认需求基线</h3>
+            <p>评审问题处理完，PM 确认签核。系统记录已签核的需求版本，后续开发有明确的需求依据，也能追查变更来自哪里。</p>
+            <dl><div><dt>你来确认</dt><dd>当前需求可以作为技术设计的输入。</dd></div><div><dt>这一步留下</dt><dd>已签核的 PRD、基线记录与 Dev 交接入口。</dd></div></dl>
+          </div>
+          <figure class="story-shot">
+            <a class="shot-link" href="../assets/walkthrough/pm-signoff.webp" target="_blank" rel="noopener" data-caption="03 · 评审修订后，确认需求基线" aria-label="放大截图：评审修订后，确认需求基线">
+              <img src="../assets/walkthrough/pm-signoff.webp" width="1662" height="1044" alt="画面已显示 PM 签核完成与 BL-0001 基线。" loading="lazy" decoding="async">
+              <span class="shot-zoom"><i data-lucide="expand" aria-hidden="true"></i>放大截图</span>
+            </a>
+            <figcaption><span>画面已显示 PM 签核完成与 BL-0001 基线。</span><a class="text-link" href="https://www.bilibili.com/video/BV1XupR6NEgL/?t=1760" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 29:20 观看：评审修订后，确认需求基线">原片 29:20<i data-lucide="external-link" aria-hidden="true"></i></a></figcaption>
+          </figure>
+        </article>
+      </section>
+      <section class="story-stage" id="design" data-stage="design" aria-labelledby="design-title">
+        <div class="stage-heading"><div><p class="section-label">02 / DEV · 技术设计</p><h2 id="design-title">把需求变成能执行的方案</h2></div><p>技术调研、设计评审与产品决策相互衔接，确认方案后再开始实现。</p></div>
+        <article class="story-step" id="step-04" aria-labelledby="step-04-title">
+          <div class="step-copy">
+            <p class="step-kicker">STEP 04 / 12</p>
+            <h3 id="step-04-title">先确认关键的技术约束</h3>
+            <p>Dev 接续已签核的需求，开展技术调研。素材的日期从哪里读取、元数据缺失时如何处理，都需要先明确，再作为技术设计文档（TD）的输入。</p>
+            <dl><div><dt>你来核对</dt><dd>技术发现是否符合产品范围与真实使用条件。</dd></div><div><dt>这一步留下</dt><dd>供后续技术设计使用的调研结论。</dd></div></dl>
+          </div>
+          <figure class="story-shot">
+            <a class="shot-link" href="../assets/walkthrough/design-research.webp" target="_blank" rel="noopener" data-caption="04 · 先确认关键的技术约束" aria-label="放大截图：先确认关键的技术约束">
+              <img src="../assets/walkthrough/design-research.webp" width="1664" height="1044" alt="技术调研确认卡：媒体元数据读取与日期缺失规则。" loading="lazy" decoding="async">
+              <span class="shot-zoom"><i data-lucide="expand" aria-hidden="true"></i>放大截图</span>
+            </a>
+            <figcaption><span>技术调研确认卡：媒体元数据读取与日期缺失规则。</span><a class="text-link" href="https://www.bilibili.com/video/BV16Qp962E1v/?t=315" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 05:15 观看：先确认关键的技术约束">原片 05:15<i data-lucide="external-link" aria-hidden="true"></i></a></figcaption>
+          </figure>
+        </article>
+        <article class="story-step" id="step-05" aria-labelledby="step-05-title">
+          <div class="step-copy">
+            <p class="step-kicker">STEP 05 / 12</p>
+            <h3 id="step-05-title">业务规则有疑问，交回 PM 决定</h3>
+            <p>TD 编写与评审后，重复收集、日期与时区等业务规则仍需明确产品意图。流程回到 PM 收口异议，修订需求后再同步技术设计。</p>
+            <dl><div><dt>你来决定</dt><dd>产品规则的取舍，以及哪些需求需要修订。</dd></div><div><dt>这一步留下</dt><dd>可追查的产品决定，供 PRD 与 TD 保持一致。</dd></div></dl>
+          </div>
+          <figure class="story-shot">
+            <a class="shot-link" href="../assets/walkthrough/design-objection.webp" target="_blank" rel="noopener" data-caption="05 · 业务规则有疑问，交回 PM 决定" aria-label="放大截图：业务规则有疑问，交回 PM 决定">
+              <img src="../assets/walkthrough/design-objection.webp" width="1664" height="1044" alt="PM 正在确认重复收集规则的产品异议决策。" loading="lazy" decoding="async">
+              <span class="shot-zoom"><i data-lucide="expand" aria-hidden="true"></i>放大截图</span>
+            </a>
+            <figcaption><span>PM 正在确认重复收集规则的产品异议决策。</span><a class="text-link" href="https://www.bilibili.com/video/BV16Qp962E1v/?t=1600" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 26:40 观看：业务规则有疑问，交回 PM 决定">原片 26:40<i data-lucide="external-link" aria-hidden="true"></i></a></figcaption>
+          </figure>
+        </article>
+        <article class="story-step" id="step-06" aria-labelledby="step-06-title">
+          <div class="step-copy">
+            <p class="step-kicker">STEP 06 / 12</p>
+            <h3 id="step-06-title">确认实现步骤，再进入开发</h3>
+            <p>设计问题收敛后，Agent 将实现顺序与验证方式整理为确认卡。用户可以逐项检查和调整，让接下来的编码有明确步骤。</p>
+            <dl><div><dt>你来确认</dt><dd>实现顺序、关键约束和每步的验证方式。</dd></div><div><dt>这一步留下</dt><dd>进入开发所依据的实现计划。</dd></div></dl>
+          </div>
+          <figure class="story-shot">
+            <a class="shot-link" href="../assets/walkthrough/design-steps.webp" target="_blank" rel="noopener" data-caption="06 · 确认实现步骤，再进入开发" aria-label="放大截图：确认实现步骤，再进入开发">
+              <img src="../assets/walkthrough/design-steps.webp" width="1664" height="1044" alt="实现步骤确认卡，提交后作为后续开发依据。" loading="lazy" decoding="async">
+              <span class="shot-zoom"><i data-lucide="expand" aria-hidden="true"></i>放大截图</span>
+            </a>
+            <figcaption><span>实现步骤确认卡，提交后作为后续开发依据。</span><a class="text-link" href="https://www.bilibili.com/video/BV16Qp962E1v/?t=4000" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 1:06:40 观看：确认实现步骤，再进入开发">原片 1:06:40<i data-lucide="external-link" aria-hidden="true"></i></a></figcaption>
+          </figure>
+        </article>
+      </section>
+      <section class="story-stage" id="coding" data-stage="coding" aria-labelledby="coding-title">
+        <div class="stage-heading"><div><p class="section-label">03 / DEV · 编码与体验</p><h2 id="coding-title">让代码跑起来，也让问题浮出来</h2></div><p>在同一工作台看实现进展、反馈实际体验，再交给独立验收检查。</p></div>
+        <article class="story-step" id="step-07" aria-labelledby="step-07-title">
+          <div class="step-copy">
+            <p class="step-kicker">STEP 07 / 12</p>
+            <h3 id="step-07-title">带着需求和设计进入编码</h3>
+            <p>确认生成代码后，Agent 读取项目知识、PRD 和 TD，在工作台持续展示实现步骤、文件修改与命令执行记录。你能看到工作正在如何推进。</p>
+            <dl><div><dt>你来把握</dt><dd>检查实现方向，必要时补充约束或纠正偏差。</dd></div><div><dt>这一步留下</dt><dd>代码改动与执行记录，供自检和验收核对。</dd></div></dl>
+          </div>
+          <figure class="story-shot">
+            <a class="shot-link" href="../assets/walkthrough/coding-agent-execution.webp" target="_blank" rel="noopener" data-caption="07 · 带着需求和设计进入编码" aria-label="放大截图：带着需求和设计进入编码">
+              <img src="../assets/walkthrough/coding-agent-execution.webp" width="1664" height="1044" alt="工作台展示项目知识读取、文件修改及执行状态。" loading="lazy" decoding="async">
+              <span class="shot-zoom"><i data-lucide="expand" aria-hidden="true"></i>放大截图</span>
+            </a>
+            <figcaption><span>工作台展示项目知识读取、文件修改及执行状态。</span><a class="text-link" href="https://www.bilibili.com/video/BV1DBp26GEew/?t=960" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 16:00 观看：带着需求和设计进入编码">原片 16:00<i data-lucide="external-link" aria-hidden="true"></i></a></figcaption>
+          </figure>
+        </article>
+        <article class="story-step" id="step-08" aria-labelledby="step-08-title">
+          <div class="step-copy">
+            <p class="step-kicker">STEP 08 / 12</p>
+            <h3 id="step-08-title">亲自体验，用截图反馈问题</h3>
+            <p>本地服务运行后，用户实际操作页面，把目录选择与待打印功能的问题连同截图发给 Agent，继续在原来的上下文中修复。</p>
+            <dl><div><dt>你来体验</dt><dd>用真实操作指出预期与实际行为的差别。</dd></div><div><dt>这一步留下</dt><dd>具体的问题反馈，以及后续修改的依据。</dd></div></dl>
+          </div>
+          <figure class="story-shot">
+            <a class="shot-link" href="../assets/walkthrough/coding-browser-feedback.webp" target="_blank" rel="noopener" data-caption="08 · 亲自体验，用截图反馈问题" aria-label="放大截图：亲自体验，用截图反馈问题">
+              <img src="../assets/walkthrough/coding-browser-feedback.webp" width="1664" height="1044" alt="用户把实际页面截图和问题描述发回工作台。" loading="lazy" decoding="async">
+              <span class="shot-zoom"><i data-lucide="expand" aria-hidden="true"></i>放大截图</span>
+            </a>
+            <figcaption><span>用户把实际页面截图和问题描述发回工作台。</span><a class="text-link" href="https://www.bilibili.com/video/BV1DBp26GEew/?t=1450" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 24:10 观看：亲自体验，用截图反馈问题">原片 24:10<i data-lucide="external-link" aria-hidden="true"></i></a></figcaption>
+          </figure>
+        </article>
+        <article class="story-step" id="step-09" aria-labelledby="step-09-title">
+          <div class="step-copy">
+            <p class="step-kicker">STEP 09 / 12</p>
+            <h3 id="step-09-title">处理验收阻塞，再继续推进</h3>
+            <p>独立验收曾被体验服务占用端口阻塞。Agent 定位原因、停止占用服务并重新检查；Northstar 验收通过后，流程再衔接代码评审。</p>
+            <dl><div><dt>你来操作</dt><dd>核对失败原因与处理结果，重新提交验收。</dd></div><div><dt>这一步留下</dt><dd>独立验收结论与进入代码评审的依据。</dd></div></dl>
+          </div>
+          <figure class="story-shot">
+            <a class="shot-link" href="../assets/walkthrough/coding-independent-acceptance.webp" target="_blank" rel="noopener" data-caption="09 · 处理验收阻塞，再继续推进" aria-label="放大截图：处理验收阻塞，再继续推进">
+              <img src="../assets/walkthrough/coding-independent-acceptance.webp" width="1664" height="1044" alt="画面显示 NS 验收通过，并保留端口问题的处理记录。" loading="lazy" decoding="async">
+              <span class="shot-zoom"><i data-lucide="expand" aria-hidden="true"></i>放大截图</span>
+            </a>
+            <figcaption><span>画面显示 NS 验收通过，并保留端口问题的处理记录。</span><a class="text-link" href="https://www.bilibili.com/video/BV1DBp26GEew/?t=3030" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 50:30 观看：处理验收阻塞，再继续推进">原片 50:30<i data-lucide="external-link" aria-hidden="true"></i></a></figcaption>
+          </figure>
+        </article>
+      </section>
+      <section class="story-stage" id="review" data-stage="review" aria-labelledby="review-title">
+        <div class="stage-heading"><div><p class="section-label">04 / DEV → QA · 评审与交接</p><h2 id="review-title">修复有依据，交接有确认</h2></div><p>两轮评审与修复之后，核对代码版本和修复结果，再由人完成签核。</p></div>
+        <article class="story-step" id="step-10" aria-labelledby="step-10-title">
+          <div class="step-copy">
+            <p class="step-kicker">STEP 10 / 12</p>
+            <h3 id="step-10-title">评审意见连接到代码和修复建议</h3>
+            <p>代码评审列出问题、证据位置与建议处理方式。首轮十三项问题修复并验收后，自动再评审发现五项问题，继续进入第二轮修复。</p>
+            <dl><div><dt>你来核对</dt><dd>看问题依据和建议，跟进修复及验证结果。</dd></div><div><dt>这一步留下</dt><dd>有编号、有证据、可逐项处理的评审问题。</dd></div></dl>
+          </div>
+          <figure class="story-shot">
+            <a class="shot-link" href="../assets/walkthrough/review-findings.webp" target="_blank" rel="noopener" data-caption="10 · 评审意见连接到代码和修复建议" aria-label="放大截图：评审意见连接到代码和修复建议">
+              <img src="../assets/walkthrough/review-findings.webp" width="1664" height="1044" alt="第二轮评审问题清单，展示证据位置与修复建议。" loading="lazy" decoding="async">
+              <span class="shot-zoom"><i data-lucide="expand" aria-hidden="true"></i>放大截图</span>
+            </a>
+            <figcaption><span>第二轮评审问题清单，展示证据位置与修复建议。</span><a class="text-link" href="https://www.bilibili.com/video/BV1chnJ6jEdZ/?t=980" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 16:20 观看：评审意见连接到代码和修复建议">原片 16:20<i data-lucide="external-link" aria-hidden="true"></i></a></figcaption>
+          </figure>
+        </article>
+        <article class="story-step" id="step-11" aria-labelledby="step-11-title">
+          <div class="step-copy">
+            <p class="step-kicker">STEP 11 / 12</p>
+            <h3 id="step-11-title">验收通过后，确认修复结果</h3>
+            <p>第二轮修复通过 Northstar 验收，确认卡列出待确认代码版本和五项必修问题。由人核对结果并确认推进，随后完成 Dev 研发签核。</p>
+            <dl><div><dt>你来确认</dt><dd>当前版本的修复结果可以接受，并推进研发签核。</dd></div><div><dt>这一步留下</dt><dd>人的确认、代码版本与签核记录之间的关联。</dd></div></dl>
+          </div>
+          <figure class="story-shot">
+            <a class="shot-link" href="../assets/walkthrough/review-confirmation.webp" target="_blank" rel="noopener" data-caption="11 · 验收通过后，确认修复结果" aria-label="放大截图：验收通过后，确认修复结果">
+              <img src="../assets/walkthrough/review-confirmation.webp" width="1664" height="1044" alt="这张卡仍在等待确认；Dev 签核在视频 30:56 完成。" loading="lazy" decoding="async">
+              <span class="shot-zoom"><i data-lucide="expand" aria-hidden="true"></i>放大截图</span>
+            </a>
+            <figcaption><span>这张卡仍在等待确认；Dev 签核在视频 30:56 完成。</span><a class="text-link" href="https://www.bilibili.com/video/BV1chnJ6jEdZ/?t=1795" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 29:55 观看：验收通过后，确认修复结果">原片 29:55<i data-lucide="external-link" aria-hidden="true"></i></a></figcaption>
+          </figure>
+        </article>
+        <article class="story-step" id="step-12" aria-labelledby="step-12-title">
+          <div class="step-copy">
+            <p class="step-kicker">STEP 12 / 12</p>
+            <h3 id="step-12-title">把已签核的结果，交给下一阶段</h3>
+            <p>Dev 签核完成并确认切换后，系统进入 QA 测试计划阶段，显示“同步测试计划”入口。需求、设计和研发结果成为接下来质量验证的输入。</p>
+            <dl><div><dt>你来推进</dt><dd>确认角色交接，继续组织测试计划。</dd></div><div><dt>这一步留下</dt><dd>清晰的当前状态，以及 QA 下一步待办。</dd></div></dl>
+          </div>
+          <figure class="story-shot">
+            <a class="shot-link" href="../assets/walkthrough/review-handoff.webp" target="_blank" rel="noopener" data-caption="12 · 把已签核的结果，交给下一阶段" aria-label="放大截图：把已签核的结果，交给下一阶段">
+              <img src="../assets/walkthrough/review-handoff.webp" width="1664" height="1044" alt="已进入 qa_plan，下一步为同步测试计划；尚未执行 QA 测试。" loading="lazy" decoding="async">
+              <span class="shot-zoom"><i data-lucide="expand" aria-hidden="true"></i>放大截图</span>
+            </a>
+            <figcaption><span>已进入 qa_plan，下一步为同步测试计划；尚未执行 QA 测试。</span><a class="text-link" href="https://www.bilibili.com/video/BV1chnJ6jEdZ/?t=1937" target="_blank" rel="noopener noreferrer" aria-label="在 B 站从 32:17 观看：把已签核的结果，交给下一阶段">原片 32:17<i data-lucide="external-link" aria-hidden="true"></i></a></figcaption>
+          </figure>
+        </article>
+      </section>
+      <section class="story-takeaway" aria-labelledby="takeaway-title">
+        <p class="section-label">WHAT STAYS / 每一步都有积累</p>
+        <h2 id="takeaway-title">推进一个需求，也留下下一步能接住的上下文</h2>
+        <ul class="takeaway-grid">
+          <li><h3>讨论成为明确的文档</h3><p>调研发现、产品决定、PRD 与技术设计，承接同一个需求，后续实现有据可依。</p></li>
+          <li><h3>问题带着证据往下走</h3><p>体验反馈、评审意见、代码修改和验收结果相互连接，失败后仍能继续定位与处理。</p></li>
+          <li><h3>关键推进由人确认</h3><p>需求签核、修复确认与角色交接都有明确入口，人掌握目标和结果的决定权。</p></li>
+        </ul>
+        <p class="story-boundary">本次实录推进到 QA 测试计划入口，尚未展示 QA 测试执行、质量签核或发布。当前主要由一个人在不同角色间切换；Dev 签核及后续 QA 流程仍在持续验证与完善。</p>
+        <div class="story-end-actions"><a class="button button-primary" href="../product/">继续了解产品<i data-lucide="arrow-right" aria-hidden="true"></i></a><a class="text-link" href="../#desktop-journey">观看四段完整视频<i data-lucide="play" aria-hidden="true"></i></a><a class="text-link" href="#main">回到开头<i data-lucide="arrow-up" aria-hidden="true"></i></a></div>
+      </section>
+    </div>
+  </main>
+  <footer class="site-footer content-width"><a class="brand" href="../"><span class="brand-mark" aria-hidden="true"><i data-lucide="sparkles"></i></span><span>Northstar</span></a><p>Chat in. Ship out.</p><a class="text-link" href="../">返回首页<i data-lucide="arrow-up-right" aria-hidden="true"></i></a></footer>
+  <dialog id="shot-dialog" aria-labelledby="shot-title"><div class="dialog-toolbar"><span id="shot-title">Northstar Desktop · 真实截图</span><div class="shot-dialog-actions"><button class="shot-size" type="button" aria-pressed="false">原尺寸</button><button class="icon-button close-dialog" type="button" aria-label="关闭截图"><i data-lucide="x" aria-hidden="true"></i></button></div></div><div class="shot-scroll"><img id="shot-image" alt=""></div></dialog>
+</body>
+</html>

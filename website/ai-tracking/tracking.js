@@ -168,12 +168,6 @@
     details.className = "signal-details";
     const toggle = document.createElement("summary");
     toggle.append(text("展开详细分析"), icon("chevron-down"));
-    const framework = document.createElement("p");
-    framework.className = "signal-framework";
-    framework.append(text("展示框架："));
-    const frameworkName = document.createElement("strong");
-    frameworkName.textContent = entry.frameworkLabel || frameworkFor(entry);
-    framework.append(frameworkName);
     const list = document.createElement("dl");
     list.className = "signal-detail-list";
     (entry.details || fallbackDetails(entry)).forEach((item) => {
@@ -186,7 +180,7 @@
       row.append(label, value);
       list.append(row);
     });
-    details.append(toggle, framework, list);
+    details.append(toggle, list);
     return details;
   };
 

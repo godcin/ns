@@ -66,8 +66,6 @@
 .signal-details summary svg { width: 14px; height: 14px; transition: transform 160ms; }
 .signal-details[open] summary svg { transform: rotate(180deg); }
 .signal-details summary:focus-visible { outline: 2px solid rgba(201, 184, 232, 0.9); outline-offset: 3px; }
-.signal-framework { margin: 0; color: var(--dim); font-size: 10px; line-height: 1.6; }
-.signal-framework strong { color: #e1d3fa; font-weight: 600; }
 .signal-detail-list { display: grid; gap: 11px; margin: 14px 0 4px; }
 .signal-detail-row { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 13px; }
 .signal-detail-row dt { color: var(--dim); font-size: 10px; line-height: 1.7; }

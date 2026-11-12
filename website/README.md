@@ -40,6 +40,17 @@ Northstar / NS 的对外介绍页，纯静态 HTML、CSS 和 JavaScript，无构
 
 `https://godcin.com/ai-tracking/` 是首页导航中的独立页面，按日期时间线查看机构动态、产业应用、研究论文和 AI Coding 条目，支持分类与关键词筛选并链接到原始来源。页面读取 `website/ai-tracking/timeline.json`；日报自动化在报告成功保存后维护时间线，页面只展示已经过来源核验的内容。需要登录的平台不用于热度判断；Google Trends 数据标明地区，不外推为中国热度。
 
+时间线数据可用以下命令校验：
+
+```sh
+node website/scripts/validate-ai-tracking.cjs
+node website/scripts/validate-ai-tracking.cjs --reports-dir "/Users/michael/Documents/ChatGPT/AI Updates/AI Daily Reports"
+node website/scripts/validate-ai-tracking.cjs --strict-details
+node website/scripts/normalize-ai-tracking.cjs --dry-run
+```
+
+校验器检查日期顺序、分类统计、详情字段、来源链接、日报截止时间、状态台账和 `tracking.js` 语法。旧条目没有详情字段时会提示警告并使用页面内的分类兜底；新增条目应补充结构化详情。
+
 ## PM 产品交互流程演示视频
 
 首页的 PM 演示使用真实 Northstar Desktop 会话录像，展示 `media-harbor` 从需求调研、逐项确认、补充约束，到 PRD 生成、评审修订和 PM 签核的过程。公开版本时长 29:42，分辨率 1920 × 1080。点击真实封面、观看入口或章节时间，在 B 站观看对应视频。

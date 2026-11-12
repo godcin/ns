@@ -60,6 +60,18 @@
 .tag-paper { color: #91c8c8; }
 .signal-item h3 { margin-top: 8px; font-size: 15px; line-height: 1.55; }
 .signal-item p { margin-top: 7px; color: var(--muted); font-size: 12px; line-height: 1.8; }
+.signal-details { margin-top: 13px; border-top: 1px solid rgba(255, 255, 255, 0.08); }
+.signal-details summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; min-height: 37px; color: #c9b8e8; cursor: pointer; font-size: 11px; list-style: none; }
+.signal-details summary::-webkit-details-marker { display: none; }
+.signal-details summary svg { width: 14px; height: 14px; transition: transform 160ms; }
+.signal-details[open] summary svg { transform: rotate(180deg); }
+.signal-details summary:focus-visible { outline: 2px solid rgba(201, 184, 232, 0.9); outline-offset: 3px; }
+.signal-framework { margin: 0; color: var(--dim); font-size: 10px; line-height: 1.6; }
+.signal-framework strong { color: #e1d3fa; font-weight: 600; }
+.signal-detail-list { display: grid; gap: 11px; margin: 14px 0 4px; }
+.signal-detail-row { display: grid; grid-template-columns: 88px minmax(0, 1fr); gap: 13px; }
+.signal-detail-row dt { color: var(--dim); font-size: 10px; line-height: 1.7; }
+.signal-detail-row dd { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
 .signal-item .text-link { min-height: 36px; margin-top: 8px; color: #c9b8e8; font-size: 11px; }
 .tracking-empty { padding: 32px 0; border-top: 1px solid var(--line); color: var(--muted); font-size: 13px; }
 .tracking-error { padding: 18px 0; border-top: 1px solid #75504f; color: #dba7a2; font-size: 12px; }
@@ -95,6 +107,7 @@
   .tracking-tabs button { flex: 1; padding-inline: 9px; }
   .signal-grid { grid-template-columns: 1fr; }
   .signal-item { padding-block: 16px 18px; }
+  .signal-detail-row { grid-template-columns: 76px minmax(0, 1fr); gap: 10px; }
   .coverage-row { grid-template-columns: 1fr; gap: 16px; }
 }
 

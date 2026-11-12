@@ -30,11 +30,11 @@
         <nav class="desktop-nav" aria-label="主导航">
           <a href="../product/index.html">产品介绍</a>
           <a href="../walkthrough/">图文演示</a>
-          <a href="./" aria-current="page">AI追踪</a>
           <a href="../#desktop-journey">视频演示</a>
           <a href="../#demo">工作台</a>
           <a href="../#workflow">工作流</a>
           <a href="../#principles">工程能力</a>
+          <a href="./" aria-current="page">AI追踪</a>
         </nav>
         <button class="icon-button menu-toggle" type="button" aria-label="展开导航" aria-controls="mobile-nav" aria-expanded="false" title="展开导航">
           <i data-lucide="menu" aria-hidden="true"></i>
@@ -43,11 +43,11 @@
       <nav id="mobile-nav" class="mobile-nav" aria-label="移动端导航" hidden>
         <a href="../product/index.html">产品介绍<i data-lucide="arrow-right" aria-hidden="true"></i></a>
         <a href="../walkthrough/">图文演示<i data-lucide="arrow-right" aria-hidden="true"></i></a>
-        <a href="./" aria-current="page">AI追踪<i data-lucide="arrow-right" aria-hidden="true"></i></a>
         <a href="../#desktop-journey">视频演示<i data-lucide="arrow-down" aria-hidden="true"></i></a>
         <a href="../#demo">工作台<i data-lucide="arrow-down" aria-hidden="true"></i></a>
         <a href="../#workflow">工作流<i data-lucide="arrow-down" aria-hidden="true"></i></a>
         <a href="../#principles">工程能力<i data-lucide="arrow-down" aria-hidden="true"></i></a>
+        <a href="./" aria-current="page">AI追踪<i data-lucide="arrow-right" aria-hidden="true"></i></a>
       </nav>
     </header>
 
@@ -58,30 +58,30 @@
           <h1 id="tracking-title">AI追踪</h1>
           <p class="tracking-subtitle">行业动态、产业应用、研究论文与 AI Coding 实践</p>
         </div>
-        <p class="tracking-updated">本期快照<br><time datetime="2026-11-11T08:40:00+08:00">2026-11-11 08:40（北京时间）</time></p>
+        <p class="tracking-updated">最近更新<br><time id="tracking-updated-time" datetime="2026-11-12T10:28:00+08:00">2026-11-12 10:28（北京时间）</time></p>
       </section>
 
-      <section class="tracking-overview content-width" aria-label="本期内容数量">
+      <section class="tracking-overview content-width" aria-label="当前日报内容数量">
         <ul class="tracking-stats">
-          <li><strong>4</strong><span>机构动态</span></li>
-          <li><strong>1</strong><span>产业试点</span></li>
-          <li><strong>3</strong><span>研究论文</span></li>
-          <li><strong>1</strong><span>趋势信号</span></li>
+          <li><strong id="stat-updates">0</strong><span>机构动态</span></li>
+          <li><strong id="stat-industry">0</strong><span>产业试点</span></li>
+          <li><strong id="stat-papers">0</strong><span>研究论文</span></li>
+          <li><strong id="stat-trends">0</strong><span>趋势信号</span></li>
         </ul>
       </section>
 
-      <section class="trend-signal section-band" aria-labelledby="trend-title">
+      <section id="trend-signal" class="trend-signal section-band" aria-labelledby="trend-title" hidden>
         <div class="content-width trend-layout">
           <div>
             <p class="section-label">GOOGLE TRENDS / UNITED STATES</p>
-            <h2 id="trend-title">Anthropic IPO 搜索兴趣上升</h2>
-            <p>美国区过去 24 小时趋势榜显示该搜索词升温。它反映 Google 搜索兴趣，不代表社交讨论量或用户态度。</p>
-            <a class="text-link" href="https://trends.google.com/trending?geo=US&amp;hours=24" target="_blank" rel="noopener noreferrer">查看 Google Trends<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+            <h2 id="trend-title"></h2>
+            <p id="trend-description"></p>
+            <a id="trend-link" class="text-link" href="https://trends.google.com/trending?geo=US&amp;hours=24" target="_blank" rel="noopener noreferrer">查看 Google Trends<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
           </div>
-          <div class="trend-metrics" aria-label="搜索量 50K 以上，增长 400%">
-            <div><strong>50K+</strong><span>搜索量</span></div>
-            <div><strong>+400%</strong><span>增长</span></div>
-            <time datetime="2026-11-11T07:58:00+08:00">观测于 07:58</time>
+          <div id="trend-metrics" class="trend-metrics">
+            <div><strong id="trend-volume"></strong><span>搜索量</span></div>
+            <div><strong id="trend-growth"></strong><span>增长</span></div>
+            <time id="trend-observed"></time>
           </div>
         </div>
       </section>
@@ -89,15 +89,17 @@
       <section class="tracking-feed content-width" aria-labelledby="feed-title">
         <div class="feed-heading">
           <div>
-            <p class="section-label">VERIFIED SOURCES</p>
-            <h2 id="feed-title">本期追踪</h2>
+            <p class="section-label">DAILY TIMELINE / VERIFIED SOURCES</p>
+            <h2 id="feed-title">日报时间线</h2>
           </div>
           <label class="tracking-search">
             <i data-lucide="search" aria-hidden="true"></i>
-            <span class="visually-hidden">搜索本期追踪</span>
-            <input id="tracking-search" type="search" placeholder="搜索动态、论文或主题" autocomplete="off">
+            <span class="visually-hidden">搜索当前日期追踪</span>
+            <input id="tracking-search" type="search" placeholder="搜索当前日期" autocomplete="off">
           </label>
         </div>
+
+        <div id="timeline-dates" class="timeline-dates" role="tablist" aria-label="日报日期"></div>
 
         <div class="tracking-tabs" role="tablist" aria-label="AI 追踪分类">
           <button id="tracking-tab-all" role="tab" type="button" aria-selected="true" aria-controls="tracking-results" data-filter="all">全部</button>
@@ -108,65 +110,10 @@
         </div>
 
         <div id="tracking-results" role="tabpanel" aria-labelledby="tracking-tab-all" tabindex="0">
-          <p id="tracking-count" class="tracking-count" aria-live="polite">显示 8 条</p>
-          <div class="signal-grid">
-            <article class="signal-item" data-categories="updates" data-search="anthropic ipo 路演 上市 sec ant 825000000 70 78">
-              <div class="signal-meta"><span class="signal-source">Anthropic</span><time datetime="2026-11-10">2026-11-10</time><span class="signal-tag tag-company">公司动态</span></div>
-              <h3>Anthropic 启动拟议 IPO 路演</h3>
-              <p>计划发行 8.25 亿股，预期价格为每股 70 至 78 美元，拟以 ANT 为代码上市。SEC 注册声明尚未生效。</p>
-              <a class="text-link" href="https://www.anthropic.com/news/roadshow-launch" target="_blank" rel="noopener noreferrer">Anthropic 官方公告<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
-            </article>
-
-            <article class="signal-item" data-categories="updates industry" data-search="openai businesses chatgpt 商家 business hub agent 电商 企业资料">
-              <div class="signal-meta"><span class="signal-source">OpenAI</span><time datetime="2026-11-10">2026-11-10</time><span class="signal-tag tag-company">产品 beta</span></div>
-              <h3>Businesses in ChatGPT 开始测试</h3>
-              <p>商家可认领资料、维护产品信息并查看聚合互动数据；符合条件的美国电商和在线服务商可以建立 Business Agent。尚无转化成效数据。</p>
-              <a class="text-link" href="https://openai.com/index/introducing-businesses-chatgpt/" target="_blank" rel="noopener noreferrer">OpenAI 官方公告<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
-            </article>
-
-            <article class="signal-item" data-categories="updates coding" data-search="google gemini 4 carbon antigravity swarm 多 agent 隔离 工作区 对抗 验证 编码">
-              <div class="signal-meta"><span class="signal-source">Google</span><time datetime="2026-11-10">2026-11-10</time><span class="signal-tag tag-model">模型开放</span></div>
-              <h3>Gemini 4 Carbon 扩大开放，Antigravity 预览 /swarm</h3>
-              <p>Carbon 面向复杂、多步骤编码和研究任务。/swarm 可让多个 Agent 在隔离工作区并行处理任务，并由验证者检查结果；目前仍是预览功能。</p>
-              <a class="text-link" href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/" target="_blank" rel="noopener noreferrer">Google 官方公告<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
-            </article>
-
-            <article class="signal-item" data-categories="updates" data-search="openai control room 35 秒 fail closed 停止 推理 研究 安全">
-              <div class="signal-meta"><span class="signal-source">OpenAI</span><time datetime="2026-11-11">2026-11-11</time><span class="signal-tag tag-safety">原文复核</span></div>
-              <h3>Control Room 的停止机制得到确认</h3>
-              <p>研究工作负载收到停止指令后，最多 35 秒内阻断后续模型输出；控制服务故障时拒绝推理。适用范围是 OpenAI 自身研究基础设施。</p>
-              <a class="text-link" href="https://openai.com/index/control-room/" target="_blank" rel="noopener noreferrer">OpenAI 原始说明<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
-            </article>
-
-            <article class="signal-item" data-categories="industry" data-search="google deepmind gemini robotics 2.5 apptronik mercedes benz apollo 2 96% 分拣 机器人 试点">
-              <div class="signal-meta"><span class="signal-source">Google DeepMind</span><time datetime="2026-11-10">2026-11-10</time><span class="signal-tag tag-industry">概念验证</span></div>
-              <h3>Apollo 2 在奔驰产线试做汽车零件分拣</h3>
-              <p>Apptronik 与 Mercedes-Benz 参与试点。Google 报告成功率为 96%；这是合作方披露的概念验证数据，不代表规模化部署或独立测量。</p>
-              <a class="text-link" href="https://deepmind.google/blog/gemini-robotics-2-5-accelerates-real-world-physical-intelligence/" target="_blank" rel="noopener noreferrer">Google DeepMind 公告<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
-            </article>
-
-            <article class="signal-item" data-categories="papers" data-search="论文 sycophancy 讨好 偏好对齐 rlhf dpo 监督微调 sft 数据">
-              <div class="signal-meta"><span class="signal-source">arXiv · cs.AI</span><time datetime="2026-11-05">2026-11-05</time><span class="signal-tag tag-paper">预印本</span></div>
-              <h3>Don't Blame The Preferences</h3>
-              <p>在三个模型家族和三种测试中，作者发现讨好倾向在监督微调阶段已较明显。启示是训练数据和早期阶段也要检查，而不只调整最终对齐。</p>
-              <a class="text-link" href="https://arxiv.org/abs/2611.10045" target="_blank" rel="noopener noreferrer">论文摘要<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
-            </article>
-
-            <article class="signal-item" data-categories="papers" data-search="论文 longtail swe 代码 agent 多语言 编程语言 基准 仓库 修复 测试">
-              <div class="signal-meta"><span class="signal-source">arXiv · cs.SE</span><time datetime="2026-11-06">2026-11-06</time><span class="signal-tag tag-paper">预印本</span></div>
-              <h3>Longtail-SWE 为 13 种少见语言补充代码修复评测</h3>
-              <p>论文整理 202 个真实仓库任务，并用求解、裁判检查和修订任务的流程减少题目描述与测试缺陷。重点是补充评测覆盖，不是宣称模型整体变强。</p>
-              <a class="text-link" href="https://arxiv.org/abs/2611.10304" target="_blank" rel="noopener noreferrer">论文摘要<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
-            </article>
-
-            <article class="signal-item" data-categories="papers" data-search="论文 sage taiyi 科学发现 agent 假设 证据 实验 化学 产率">
-              <div class="signal-meta"><span class="signal-source">arXiv · cs.AI</span><time datetime="2026-11-09">2026-11-09</time><span class="signal-tag tag-paper">预印本</span></div>
-              <h3>Sage-Taiyi 尝试让科研 Agent 跟踪证据与未解问题</h3>
-              <p>作者报告其在 265 个科学构想任务上超过所测基线，并展示五项专家指导合作实验。榜单与化学结果仍是预印本作者报告，实验范围有限。</p>
-              <a class="text-link" href="https://arxiv.org/abs/2611.12762" target="_blank" rel="noopener noreferrer">论文摘要<i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
-            </article>
-          </div>
+          <p id="tracking-count" class="tracking-count" aria-live="polite">正在加载时间线…</p>
+          <div id="signal-grid" class="signal-grid"></div>
           <p id="tracking-empty" class="tracking-empty" hidden>没有匹配的追踪条目。</p>
+          <p id="tracking-error" class="tracking-error" hidden>时间线暂时无法加载，请稍后再试。</p>
         </div>
       </section>
 

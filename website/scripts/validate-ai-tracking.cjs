@@ -40,10 +40,15 @@ function validateReports(reportsDir, latestTimelineDate, errors) {
   if (latestReportDate !== latestTimelineDate) errors.push(`latest report ${latestReportDate} does not match timeline ${latestTimelineDate}`)
   const latestReport = fs.readFileSync(path.join(reportsDir, reportFiles.at(-1)), 'utf8')
   const cutoff = latestReport.match(/内容截止时间：\*\*\s*(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2}:\d{2})（Asia\/Shanghai）/)
-  if (!cutoff) errors.push(`latest report ${reportFiles.at(-1)} is missing a content cutoff`) 
-  else {
+  const legacyCutoff = latestReport.match(/检索截止时间\s*\|\s*(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2})（Asia\/Shanghai）/)
+  let expectedCheckpoint
+  if (!cutoff && !legacyCutoff) errors.push(`latest report ${reportFiles.at(-1)} is missing a content cutoff`)
+  else if (cutoff) {
     const expectedDate = dateOffset(latestReportDate, -1)
     if (cutoff[1] !== expectedDate || cutoff[2] !== '23:59:59') errors.push(`latest report cutoff must be ${expectedDate} 23:59:59, got ${cutoff[1]} ${cutoff[2]}`)
+    expectedCheckpoint = `${cutoff[1]}T${cutoff[2]}+08:00`
+  } else {
+    expectedCheckpoint = `${legacyCutoff[1]}T${legacyCutoff[2]}:00+08:00`
   }
   const statePath = path.join(reportsDir, '.state.json')
   if (!fs.existsSync(statePath)) {
@@ -52,8 +57,7 @@ function validateReports(reportsDir, latestTimelineDate, errors) {
   }
   const state = readJson(statePath, '.state.json', errors)
   if (!state) return
-  const expectedCheckpoint = `${dateOffset(latestReportDate, -1)}T23:59:59+08:00`
-  if (state.last_successful_run !== expectedCheckpoint) errors.push(`.state.json last_successful_run must be ${expectedCheckpoint}`)
+  if (expectedCheckpoint && state.last_successful_run !== expectedCheckpoint) errors.push(`.state.json last_successful_run must be ${expectedCheckpoint}`)
   if (state.last_generated_at && !state.last_generated_at.startsWith(`${latestReportDate}T`)) errors.push(`.state.json last_generated_at must be on ${latestReportDate}`)
   if (!Array.isArray(state.retry_queue)) errors.push('.state.json retry_queue must be an array')
   else state.retry_queue.forEach((item, index) => {

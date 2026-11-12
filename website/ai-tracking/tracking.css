@@ -22,8 +22,9 @@
 .trend-metrics div:nth-child(2) strong { color: #8fc8a0; }
 .trend-metrics span, .trend-metrics time { color: var(--dim); font-size: 10px; }
 .trend-metrics time { grid-column: 1 / -1; justify-self: end; font-variant-numeric: tabular-nums; }
-.tracking-feed { padding-block: 48px 58px; }
+.tracking-feed { display: grid; grid-template-columns: 180px minmax(0, 1fr); column-gap: 42px; padding-block: 48px 58px; }
 .feed-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; }
+.tracking-feed > .feed-heading { grid-column: 1 / -1; }
 .feed-heading h2 { margin-top: 7px; font-size: 24px; }
 .tracking-search { display: flex; align-items: center; gap: 9px; width: min(330px, 44%); min-height: 40px; padding: 0 11px; border: 1px solid var(--line); border-radius: 6px; background: #111216; color: var(--dim); }
 .tracking-search svg { width: 16px; height: 16px; }
@@ -31,9 +32,9 @@
 .tracking-search input::placeholder { color: var(--dim); }
 .tracking-search:focus-within { border-color: rgba(175, 135, 255, 0.55); }
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-.timeline-dates { position: relative; display: flex; gap: 8px; max-width: 100%; margin-top: 30px; padding: 0 0 12px; overflow-x: auto; scrollbar-width: thin; }
-.timeline-dates::before { content: ""; position: absolute; top: 19px; right: 18px; left: 18px; height: 1px; background: var(--line); }
-.timeline-dates button { position: relative; z-index: 1; display: grid; justify-items: start; gap: 5px; flex: 0 0 112px; min-height: 58px; padding: 8px 10px 9px; border: 1px solid var(--line); border-radius: 5px; background: #111216; color: var(--muted); text-align: left; transition: border-color 160ms, background 160ms, color 160ms; }
+.timeline-dates { position: relative; display: grid; grid-column: 1; grid-row: 2 / span 2; align-content: start; gap: 8px; max-width: 100%; margin-top: 30px; padding: 0 0 12px; }
+.timeline-dates::before { content: ""; position: absolute; top: 18px; bottom: 18px; left: 17px; width: 1px; background: var(--line); }
+.timeline-dates button { position: relative; z-index: 1; display: grid; justify-items: start; gap: 5px; width: 100%; min-height: 58px; padding: 8px 10px 9px 32px; border: 1px solid var(--line); border-radius: 5px; background: #111216; color: var(--muted); text-align: left; transition: border-color 160ms, background 160ms, color 160ms; }
 .timeline-dates button::before { content: ""; width: 8px; height: 8px; margin: 0 0 1px 1px; border: 2px solid #5c5e69; border-radius: 50%; background: #111216; }
 .timeline-dates button:hover { border-color: #777986; color: var(--text); }
 .timeline-dates button:focus-visible { outline: 2px solid rgba(201, 184, 232, 0.9); outline-offset: 2px; }
@@ -43,10 +44,12 @@
 .timeline-dates span { color: var(--dim); font-size: 10px; line-height: 1.2; }
 .timeline-dates button[aria-selected="true"] span { color: #c9b8e8; }
 .tracking-tabs { display: flex; align-items: center; gap: 4px; width: max-content; max-width: 100%; margin-top: 24px; padding: 3px; border: 1px solid var(--line); border-radius: 7px; background: #14151a; overflow-x: auto; }
+.tracking-feed > .tracking-tabs { grid-column: 2; grid-row: 2; }
 .tracking-tabs button { flex: none; min-height: 32px; padding: 0 13px; border: 0; border-radius: 4px; background: transparent; color: var(--muted); font-size: 12px; white-space: nowrap; transition: background 160ms, color 160ms; }
 .tracking-tabs button:hover { color: var(--text); }
 .tracking-tabs button[aria-selected="true"] { background: var(--accent-soft); color: #e1d3fa; }
 .tracking-count { margin-top: 21px; color: var(--dim); font-size: 11px; font-variant-numeric: tabular-nums; }
+.tracking-feed > #tracking-results { grid-column: 2; grid-row: 3; }
 .signal-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 42px; margin-top: 4px; }
 .signal-item { min-width: 0; padding: 18px 0 20px; border-top: 1px solid var(--line); }
 .signal-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 7px 10px; color: var(--dim); font-size: 10px; }
@@ -95,12 +98,12 @@
   .trend-layout h2 { font-size: 19px; }
   .trend-metrics { justify-content: start; gap: 6px 30px; }
   .trend-metrics time { grid-column: auto; align-self: end; justify-self: start; margin-left: 5px; padding-bottom: 3px; }
-  .tracking-feed { padding-block: 36px 42px; }
+  .tracking-feed { display: block; padding-block: 36px 42px; }
   .feed-heading { align-items: start; flex-direction: column; gap: 17px; }
   .tracking-search { width: 100%; }
-  .timeline-dates { margin-top: 24px; padding-bottom: 10px; }
-  .timeline-dates::before { right: 16px; left: 16px; }
-  .timeline-dates button { flex-basis: 104px; }
+  .timeline-dates { display: flex; gap: 8px; margin-top: 24px; padding-bottom: 10px; overflow-x: auto; scrollbar-width: thin; }
+  .timeline-dates::before { top: 19px; right: 16px; bottom: auto; left: 16px; width: auto; height: 1px; }
+  .timeline-dates button { width: auto; flex: 0 0 104px; padding: 8px 10px 9px; }
   .tracking-tabs { width: 100%; margin-top: 19px; }
   .tracking-tabs button { flex: 1; padding-inline: 9px; }
   .signal-grid { grid-template-columns: 1fr; }

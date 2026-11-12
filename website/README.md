@@ -38,7 +38,7 @@ Northstar / NS 的对外介绍页，纯静态 HTML、CSS 和 JavaScript，无构
 
 ## AI 追踪
 
-`https://godcin.com/ai-tracking/` 是首页导航中的独立页面，按日期时间线查看机构动态、产业应用、研究论文和 AI Coding 条目，支持分类与关键词筛选并链接到原始来源。页面读取 `website/ai-tracking/timeline.json`；日报自动化在报告成功保存后维护时间线，页面只展示已经过来源核验的内容。需要登录的平台不用于热度判断；Google Trends 数据标明地区，不外推为中国热度。
+`https://godcin.com/ai-tracking/` 是首页导航中的独立页面，按日期时间线查看机构动态、产业应用、研究论文和 AI Coding 条目，桌面端日期节点位于左侧，支持分类与关键词筛选并链接到原始来源。页面读取 `website/ai-tracking/timeline.json`；日报自动化在报告成功保存后维护时间线，页面只展示已经过来源核验的内容。需要登录的平台不用于热度判断；Google Trends 数据标明地区，不外推为中国热度。
 
 时间线数据可用以下命令校验：
 

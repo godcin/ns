@@ -3,60 +3,19 @@
   "updatedAt": "2026-11-16T20:45:00+08:00",
   "days": [
     {
-      "date": "2026-11-16",
-      "label": "11月16日",
+      "date": "2026-11-13",
+      "label": "11月13日",
       "relative": "最新",
       "generatedAt": "2026-11-16T20:45:00+08:00",
-      "generatedAtLabel": "2026-11-16 20:45（北京时间）",
+      "generatedAtLabel": "回填于 2026-11-16",
+      "reportDate": "2026-11-16",
       "stats": {
-        "updates": 5,
-        "industry": 2,
+        "updates": 3,
+        "industry": 1,
         "papers": 3,
         "trends": 0
       },
       "entries": [
-        {
-          "category": "updates",
-          "source": "Google",
-          "date": "2026-11-12",
-          "tag": "AI Coding",
-          "tagClass": "tag-model",
-          "title": "Gemini 4 Hydrogen 面向日常编码与 Agent 工作流",
-          "summary": "Google 发布面向日常编码、调试和 Agent 工作流的 Hydrogen，并提供四档 thinking level；适用范围和入口以官方页面为准。",
-          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-hydrogen/",
-          "linkLabel": "Google 官方公告",
-          "search": "Gemini 4 Hydrogen 日常编码 调试 Agent 工作流 thinking level",
-          "extraCategories": ["coding"],
-          "framework": "SMART",
-          "details": [
-            { "label": "目标", "value": "让日常编码、调试和 Agent 工作流使用更快、更节省成本的模型。" },
-            { "label": "指标", "value": "官方定位覆盖仓库编码、交互式 Web 开发和多模态工作流，并提供四档 thinking level。" },
-            { "label": "范围", "value": "先用于可回滚的仓库任务，按任务难度决定是否升级到更强模型。" },
-            { "label": "时限", "value": "用一周固定任务集完成 Hydrogen 与现有 Agent 的基线比较。" },
-            { "label": "验收", "value": "同时检查测试通过率、返工时间、延迟、总成本和人工审查结果。" }
-          ]
-        },
-        {
-          "category": "updates",
-          "source": "Google",
-          "date": "2026-11-12",
-          "tag": "产品更新",
-          "tagClass": "tag-company",
-          "title": "Gemini in Chrome 增加页面侧栏问答",
-          "summary": "用户可以在 Chrome 侧栏总结长文、比较产品或解释复杂内容，同时保持当前页面位置；公告未提供独立准确率数据。",
-          "url": "https://blog.google/innovation-and-ai/products/gemini-app/research-with-gemini-in-chrome/",
-          "linkLabel": "Google 官方说明",
-          "search": "Gemini Chrome 侧栏 总结 比较 产品 解释 页面",
-          "framework": "5W2H",
-          "details": [
-            { "label": "发生了什么", "value": "Gemini 可在 Chrome 侧栏读取当前页面并提供总结、比较和解释。" },
-            { "label": "谁 / 面向谁", "value": "面向需要在浏览网页时快速整理信息的 Chrome 用户。" },
-            { "label": "何时与阶段", "value": "来源日期为 2026-11-12；官方说明展示的是产品使用方式。" },
-            { "label": "为什么重要", "value": "它把模型调用嵌入资料阅读流程，减少切换页面的成本。" },
-            { "label": "证据边界", "value": "页面没有提供独立准确率或引用完整性数据，复杂结论仍需回看原文。" },
-            { "label": "下一步", "value": "在低风险资料整理任务中抽样核对原文、摘要遗漏和事实错误。" }
-          ]
-        },
         {
           "category": "updates",
           "source": "Google",
@@ -70,12 +29,30 @@
           "search": "Google Wallet Gemini 消费记录 支出 预算 订阅 美国",
           "framework": "5W2H",
           "details": [
-            { "label": "发生了什么", "value": "Gemini 可在用户连接 Google Wallet 后参考消费记录回答财务问题。" },
-            { "label": "谁 / 面向谁", "value": "Google Gemini app 美国区用户；公告未说明其他地区开放。" },
-            { "label": "何时与阶段", "value": "来源日期为 2026-11-13；当前属于官方介绍的连接能力。" },
-            { "label": "为什么重要", "value": "模型从通用问答进入个人数据驱动的建议场景，权限和错误解释会直接影响信任。" },
-            { "label": "证据边界", "value": "没有独立准确率、节省金额或理财效果数据，模型输出不能替代财务事实。" },
-            { "label": "下一步", "value": "测试权限范围、数据新鲜度、错误分类和撤销连接路径。" }
+            {
+              "label": "发生了什么",
+              "value": "Gemini 可在用户连接 Google Wallet 后参考消费记录回答财务问题。"
+            },
+            {
+              "label": "谁 / 面向谁",
+              "value": "Google Gemini app 美国区用户；公告未说明其他地区开放。"
+            },
+            {
+              "label": "何时与阶段",
+              "value": "来源日期为 2026-11-13；当前属于官方介绍的连接能力。"
+            },
+            {
+              "label": "为什么重要",
+              "value": "模型从通用问答进入个人数据驱动的建议场景，权限和错误解释会直接影响信任。"
+            },
+            {
+              "label": "证据边界",
+              "value": "没有独立准确率、节省金额或理财效果数据，模型输出不能替代财务事实。"
+            },
+            {
+              "label": "下一步",
+              "value": "测试权限范围、数据新鲜度、错误分类和撤销连接路径。"
+            }
           ]
         },
         {
@@ -91,12 +68,30 @@
           "search": "Google Cloud Credits AI Studio Gemini API 账单 开发者计划",
           "framework": "5W2H",
           "details": [
-            { "label": "发生了什么", "value": "Google Developer Program 的 Cloud Credits 可在 AI Studio 内关联和管理。" },
-            { "label": "谁 / 面向谁", "value": "使用 AI Studio 和 Gemini API 的开发者与小型团队。" },
-            { "label": "何时与阶段", "value": "来源日期为 2026-11-13；属于开发者工具的使用流程更新。" },
-            { "label": "为什么重要", "value": "减少试验到 API 使用的切换步骤，也让预算管理更靠近调用入口。" },
-            { "label": "证据边界", "value": "公告没有替团队设置预算、密钥隔离或异常告警，成本控制仍需自行配置。" },
-            { "label": "下一步", "value": "先按项目隔离密钥和账单，设置预算上限后再开放自动化调用。" }
+            {
+              "label": "发生了什么",
+              "value": "Google Developer Program 的 Cloud Credits 可在 AI Studio 内关联和管理。"
+            },
+            {
+              "label": "谁 / 面向谁",
+              "value": "使用 AI Studio 和 Gemini API 的开发者与小型团队。"
+            },
+            {
+              "label": "何时与阶段",
+              "value": "来源日期为 2026-11-13；属于开发者工具的使用流程更新。"
+            },
+            {
+              "label": "为什么重要",
+              "value": "减少试验到 API 使用的切换步骤，也让预算管理更靠近调用入口。"
+            },
+            {
+              "label": "证据边界",
+              "value": "公告没有替团队设置预算、密钥隔离或异常告警，成本控制仍需自行配置。"
+            },
+            {
+              "label": "下一步",
+              "value": "先按项目隔离密钥和账单，设置预算上限后再开放自动化调用。"
+            }
           ]
         },
         {
@@ -112,33 +107,30 @@
           "search": "OpenAI ChatGPT Wallet Codex dots 用户批准 购买 卡片保护",
           "framework": "5W2H",
           "details": [
-            { "label": "发生了什么", "value": "OpenAI RSS 于 2026-11-13 列出 ChatGPT Wallet，描述 Agent 在用户批准下完成购买。" },
-            { "label": "谁 / 面向谁", "value": "RSS 描述提到 ChatGPT Work、Codex 和 dots；具体资格未核实。" },
-            { "label": "何时与阶段", "value": "RSS 时间为 2026-11-13；正文页面本次返回 403。" },
-            { "label": "为什么重要", "value": "它指向 Agent 从信息处理进入交易执行的产品方向，授权和风控会成为核心约束。" },
-            { "label": "证据边界", "value": "只核对了官方 RSS 的标题、日期和描述，未核对地区、商户、退款和权限细节。" },
-            { "label": "下一步", "value": "等待下一个工作日重试正文，并在核实前不把它作为可用支付能力规划。" }
-          ]
-        },
-        {
-          "category": "industry",
-          "source": "OpenAI / Amplitude",
-          "date": "2026-11-12",
-          "tag": "客户案例",
-          "tagClass": "tag-industry",
-          "title": "Amplitude 用 Wave Agent 串联发现、交付和测量",
-          "summary": "OpenAI RSS 客户案例描述 Wave 负责发现构建事项、调用 coding agents 交付并测量影响；1–2 天交付速度属于客户案例自报。",
-          "url": "https://openai.com/business/customer-stories/amplitude",
-          "linkLabel": "OpenAI 客户案例（RSS 发现）",
-          "search": "Amplitude Wave Agent coding agents 产品改进 1-2 天 OpenAI",
-          "framework": "STAR",
-          "details": [
-            { "label": "场景", "value": "Amplitude 想把产品发现、开发交付和结果分析放在同一条工作流中。" },
-            { "label": "任务", "value": "让 Agent 找出值得构建的事项，同时连接 coding agents 和产品指标。" },
-            { "label": "行动", "value": "OpenAI RSS 描述 Wave 负责发现、交付和测量；客户案例标题宣称 1–2 天完成产品改进。" },
-            { "label": "结果", "value": "目前可确认的是客户案例的流程设计，速度和收益属于厂商或客户自报。" },
-            { "label": "边界", "value": "缺少独立对照数据，不能把 1–2 天直接外推到其他团队。" },
-            { "label": "可复用做法", "value": "选低风险改动保留人工审批，记录需求确认、提交、上线、回滚和指标变化。" }
+            {
+              "label": "发生了什么",
+              "value": "OpenAI RSS 于 2026-11-13 列出 ChatGPT Wallet，描述 Agent 在用户批准下完成购买。"
+            },
+            {
+              "label": "谁 / 面向谁",
+              "value": "RSS 描述提到 ChatGPT Work、Codex 和 dots；具体资格未核实。"
+            },
+            {
+              "label": "何时与阶段",
+              "value": "RSS 时间为 2026-11-13；正文页面本次返回 403。"
+            },
+            {
+              "label": "为什么重要",
+              "value": "它指向 Agent 从信息处理进入交易执行的产品方向，授权和风控会成为核心约束。"
+            },
+            {
+              "label": "证据边界",
+              "value": "只核对了官方 RSS 的标题、日期和描述，未核对地区、商户、退款和权限细节。"
+            },
+            {
+              "label": "下一步",
+              "value": "等待下一个工作日重试正文，并在核实前不把它作为可用支付能力规划。"
+            }
           ]
         },
         {
@@ -154,12 +146,30 @@
           "search": "Shield Forge agents legacy portals IT technicians OpenAI",
           "framework": "STAR",
           "details": [
-            { "label": "场景", "value": "技术人员需要通过没有 API 的遗留门户处理重复操作。" },
-            { "label": "任务", "value": "减少机械点击，同时把需要判断的异常保留给技术人员。" },
-            { "label": "行动", "value": "RSS 描述 Forge agents 导航旧式系统并完成部分工作。" },
-            { "label": "结果", "value": "案例支持“Agent 操作遗留系统”的落地方向，但未提供可独立复核的成功率。" },
-            { "label": "边界", "value": "页面变化、登录状态、权限、提交动作和异常恢复仍是主要风险。" },
-            { "label": "可复用做法", "value": "把每个动作做成可审计步骤，在提交、删除和权限变更前保留人工确认。" }
+            {
+              "label": "场景",
+              "value": "技术人员需要通过没有 API 的遗留门户处理重复操作。"
+            },
+            {
+              "label": "任务",
+              "value": "减少机械点击，同时把需要判断的异常保留给技术人员。"
+            },
+            {
+              "label": "行动",
+              "value": "RSS 描述 Forge agents 导航旧式系统并完成部分工作。"
+            },
+            {
+              "label": "结果",
+              "value": "案例支持“Agent 操作遗留系统”的落地方向，但未提供可独立复核的成功率。"
+            },
+            {
+              "label": "边界",
+              "value": "页面变化、登录状态、权限、提交动作和异常恢复仍是主要风险。"
+            },
+            {
+              "label": "可复用做法",
+              "value": "把每个动作做成可审计步骤，在提交、删除和权限变更前保留人工确认。"
+            }
           ]
         },
         {
@@ -175,11 +185,26 @@
           "search": "WeightBench weight-space programming 42 tasks neural network weights",
           "framework": "论文五问",
           "details": [
-            { "label": "研究问题", "value": "模型能否直接读取、修复或生成另一个神经网络的权重，而不依赖梯度下降？" },
-            { "label": "方法", "value": "构建 42 个任务、五条轨道，网络规模从约 2K 参数控制策略到 7B 参数语言模型。" },
-            { "label": "结果", "value": "作者报告前沿 Agent 能读取小网络并写出控制策略，但还不能稳定修补语言模型或做无数据压缩。" },
-            { "label": "边界", "value": "任务和网络类型有限，结果来自预印本作者报告，不能代表通用模型能力。" },
-            { "label": "应用", "value": "在沙箱中测试模型配置或小型策略网络的参数修改、运行行为和不可行操作。" }
+            {
+              "label": "研究问题",
+              "value": "模型能否直接读取、修复或生成另一个神经网络的权重，而不依赖梯度下降？"
+            },
+            {
+              "label": "方法",
+              "value": "构建 42 个任务、五条轨道，网络规模从约 2K 参数控制策略到 7B 参数语言模型。"
+            },
+            {
+              "label": "结果",
+              "value": "作者报告前沿 Agent 能读取小网络并写出控制策略，但还不能稳定修补语言模型或做无数据压缩。"
+            },
+            {
+              "label": "边界",
+              "value": "任务和网络类型有限，结果来自预印本作者报告，不能代表通用模型能力。"
+            },
+            {
+              "label": "应用",
+              "value": "在沙箱中测试模型配置或小型策略网络的参数修改、运行行为和不可行操作。"
+            }
           ]
         },
         {
@@ -195,11 +220,26 @@
           "search": "ModHarness-RL learnable evolving harness compression steering CodeSearch ALFWorld BIRD SQL",
           "framework": "论文五问",
           "details": [
-            { "label": "研究问题", "value": "固定的 Agent 外层 Harness 是否会跟不上模型和任务变化？" },
-            { "label": "方法", "value": "让 Compression 组装历史上下文、Steering 在偏离时引导，并对候选程序执行验证和轨迹回放。" },
-            { "label": "结果", "value": "在 1.5B–8B 模型和三个任务上，作者报告多数设置优于固定 Harness。" },
-            { "label": "边界", "value": "多数设置不等于所有任务都有效，也没有证明自动演化在生产权限环境中天然安全。" },
-            { "label": "应用", "value": "先记录上下文裁剪、工具调用和失败恢复，用离线回放比较 Harness 版本。" }
+            {
+              "label": "研究问题",
+              "value": "固定的 Agent 外层 Harness 是否会跟不上模型和任务变化？"
+            },
+            {
+              "label": "方法",
+              "value": "让 Compression 组装历史上下文、Steering 在偏离时引导，并对候选程序执行验证和轨迹回放。"
+            },
+            {
+              "label": "结果",
+              "value": "在 1.5B–8B 模型和三个任务上，作者报告多数设置优于固定 Harness。"
+            },
+            {
+              "label": "边界",
+              "value": "多数设置不等于所有任务都有效，也没有证明自动演化在生产权限环境中天然安全。"
+            },
+            {
+              "label": "应用",
+              "value": "先记录上下文裁剪、工具调用和失败恢复，用离线回放比较 Harness 版本。"
+            }
           ]
         },
         {
@@ -215,11 +255,158 @@
           "search": "StreamEmbed incremental visual embedding screenshot retrieval ScreenMemEval",
           "framework": "论文五问",
           "details": [
-            { "label": "研究问题", "value": "如何让屏幕历史可搜索，同时避免每张截图重新编码或只依赖 OCR？" },
-            { "label": "方法", "value": "跳过重复像素块并复用未变化区域的缓存，再用适配器补偿误差。" },
-            { "label": "结果", "value": "在 10,426 个问题和 184 小时屏幕历史上，作者报告最高 3.7 倍速度和最高 6.3 个 Recall@10 点提升。" },
-            { "label": "边界", "value": "数据来自两名用户和一个计算机使用 Agent，不能代表所有设备、隐私策略和界面。" },
-            { "label": "应用", "value": "先只索引用户明确选择的窗口，同时测量检索准确率、延迟、内存和敏感信息误召回。" }
+            {
+              "label": "研究问题",
+              "value": "如何让屏幕历史可搜索，同时避免每张截图重新编码或只依赖 OCR？"
+            },
+            {
+              "label": "方法",
+              "value": "跳过重复像素块并复用未变化区域的缓存，再用适配器补偿误差。"
+            },
+            {
+              "label": "结果",
+              "value": "在 10,426 个问题和 184 小时屏幕历史上，作者报告最高 3.7 倍速度和最高 6.3 个 Recall@10 点提升。"
+            },
+            {
+              "label": "边界",
+              "value": "数据来自两名用户和一个计算机使用 Agent，不能代表所有设备、隐私策略和界面。"
+            },
+            {
+              "label": "应用",
+              "value": "先只索引用户明确选择的窗口，同时测量检索准确率、延迟、内存和敏感信息误召回。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-11-12",
+      "label": "11月12日",
+      "relative": "前一天",
+      "generatedAt": "2026-11-16T20:45:00+08:00",
+      "generatedAtLabel": "回填于 2026-11-16",
+      "reportDate": "2026-11-16",
+      "stats": {
+        "updates": 2,
+        "industry": 1,
+        "papers": 0,
+        "trends": 0
+      },
+      "entries": [
+        {
+          "category": "updates",
+          "source": "Google",
+          "date": "2026-11-12",
+          "tag": "AI Coding",
+          "tagClass": "tag-model",
+          "title": "Gemini 4 Hydrogen 面向日常编码与 Agent 工作流",
+          "summary": "Google 发布面向日常编码、调试和 Agent 工作流的 Hydrogen，并提供四档 thinking level；适用范围和入口以官方页面为准。",
+          "url": "https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-4-hydrogen/",
+          "linkLabel": "Google 官方公告",
+          "search": "Gemini 4 Hydrogen 日常编码 调试 Agent 工作流 thinking level",
+          "extraCategories": [
+            "coding"
+          ],
+          "framework": "SMART",
+          "details": [
+            {
+              "label": "目标",
+              "value": "让日常编码、调试和 Agent 工作流使用更快、更节省成本的模型。"
+            },
+            {
+              "label": "指标",
+              "value": "官方定位覆盖仓库编码、交互式 Web 开发和多模态工作流，并提供四档 thinking level。"
+            },
+            {
+              "label": "范围",
+              "value": "先用于可回滚的仓库任务，按任务难度决定是否升级到更强模型。"
+            },
+            {
+              "label": "时限",
+              "value": "用一周固定任务集完成 Hydrogen 与现有 Agent 的基线比较。"
+            },
+            {
+              "label": "验收",
+              "value": "同时检查测试通过率、返工时间、延迟、总成本和人工审查结果。"
+            }
+          ]
+        },
+        {
+          "category": "updates",
+          "source": "Google",
+          "date": "2026-11-12",
+          "tag": "产品更新",
+          "tagClass": "tag-company",
+          "title": "Gemini in Chrome 增加页面侧栏问答",
+          "summary": "用户可以在 Chrome 侧栏总结长文、比较产品或解释复杂内容，同时保持当前页面位置；公告未提供独立准确率数据。",
+          "url": "https://blog.google/innovation-and-ai/products/gemini-app/research-with-gemini-in-chrome/",
+          "linkLabel": "Google 官方说明",
+          "search": "Gemini Chrome 侧栏 总结 比较 产品 解释 页面",
+          "framework": "5W2H",
+          "details": [
+            {
+              "label": "发生了什么",
+              "value": "Gemini 可在 Chrome 侧栏读取当前页面并提供总结、比较和解释。"
+            },
+            {
+              "label": "谁 / 面向谁",
+              "value": "面向需要在浏览网页时快速整理信息的 Chrome 用户。"
+            },
+            {
+              "label": "何时与阶段",
+              "value": "来源日期为 2026-11-12；官方说明展示的是产品使用方式。"
+            },
+            {
+              "label": "为什么重要",
+              "value": "它把模型调用嵌入资料阅读流程，减少切换页面的成本。"
+            },
+            {
+              "label": "证据边界",
+              "value": "页面没有提供独立准确率或引用完整性数据，复杂结论仍需回看原文。"
+            },
+            {
+              "label": "下一步",
+              "value": "在低风险资料整理任务中抽样核对原文、摘要遗漏和事实错误。"
+            }
+          ]
+        },
+        {
+          "category": "industry",
+          "source": "OpenAI / Amplitude",
+          "date": "2026-11-12",
+          "tag": "客户案例",
+          "tagClass": "tag-industry",
+          "title": "Amplitude 用 Wave Agent 串联发现、交付和测量",
+          "summary": "OpenAI RSS 客户案例描述 Wave 负责发现构建事项、调用 coding agents 交付并测量影响；1–2 天交付速度属于客户案例自报。",
+          "url": "https://openai.com/business/customer-stories/amplitude",
+          "linkLabel": "OpenAI 客户案例（RSS 发现）",
+          "search": "Amplitude Wave Agent coding agents 产品改进 1-2 天 OpenAI",
+          "framework": "STAR",
+          "details": [
+            {
+              "label": "场景",
+              "value": "Amplitude 想把产品发现、开发交付和结果分析放在同一条工作流中。"
+            },
+            {
+              "label": "任务",
+              "value": "让 Agent 找出值得构建的事项，同时连接 coding agents 和产品指标。"
+            },
+            {
+              "label": "行动",
+              "value": "OpenAI RSS 描述 Wave 负责发现、交付和测量；客户案例标题宣称 1–2 天完成产品改进。"
+            },
+            {
+              "label": "结果",
+              "value": "目前可确认的是客户案例的流程设计，速度和收益属于厂商或客户自报。"
+            },
+            {
+              "label": "边界",
+              "value": "缺少独立对照数据，不能把 1–2 天直接外推到其他团队。"
+            },
+            {
+              "label": "可复用做法",
+              "value": "选低风险改动保留人工审批，记录需求确认、提交、上线、回滚和指标变化。"
+            }
           ]
         }
       ]
@@ -227,13 +414,14 @@
     {
       "date": "2026-11-11",
       "label": "11月11日",
-      "relative": "最新",
+      "relative": "更早",
       "generatedAt": "2026-11-11T08:40:00+08:00",
       "generatedAtLabel": "2026-11-11 08:40（北京时间）",
+      "reportDate": "2026-11-11",
       "stats": {
-        "updates": 4,
-        "industry": 1,
-        "papers": 3,
+        "updates": 1,
+        "industry": 0,
+        "papers": 0,
         "trends": 1
       },
       "trend": {
@@ -244,6 +432,61 @@
         "observed": "观测于 07:58（北京时间）",
         "observedAt": "2026-11-11T07:58:00+08:00",
         "url": "https://trends.google.com/trending?geo=US&hours=24"
+      },
+      "entries": [
+        {
+          "category": "updates",
+          "source": "OpenAI",
+          "date": "2026-11-11",
+          "tag": "原文复核",
+          "tagClass": "tag-safety",
+          "title": "Control Room 的停止机制得到确认",
+          "summary": "研究工作负载收到停止指令后，最多 35 秒内阻断后续模型输出；控制服务故障时拒绝推理。适用范围是 OpenAI 自身研究基础设施。",
+          "url": "https://openai.com/index/control-room/",
+          "linkLabel": "OpenAI 原始说明",
+          "search": "openai control room 35 秒 fail closed 停止 推理 研究 安全",
+          "framework": "5W2H",
+          "details": [
+            {
+              "label": "发生了什么",
+              "value": "研究工作负载收到停止指令后，最多 35 秒内阻断后续模型输出；控制服务故障时拒绝推理。适用范围是 OpenAI 自身研究基础设施。"
+            },
+            {
+              "label": "谁 / 面向谁",
+              "value": "OpenAI，主要影响与该条目同类的开发者、产品或业务团队。"
+            },
+            {
+              "label": "何时与阶段",
+              "value": "来源日期为 2026-11-11；当前条目按其页面标注的发布、预览或研究阶段理解。"
+            },
+            {
+              "label": "为什么重要",
+              "value": "它提供了一个可观察的能力或产品变化，但影响仍取决于可用范围、稳定性和实际使用成本。"
+            },
+            {
+              "label": "证据边界",
+              "value": "详情以原始来源为准；厂商演示、预印本和单一案例不能替代独立验证。"
+            },
+            {
+              "label": "下一步",
+              "value": "围绕自己的任务做一次小范围、可回滚的验证，并记录效果、失败和人工介入。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-11-10",
+      "label": "11月10日",
+      "relative": "更早",
+      "generatedAt": "2026-11-11T08:40:00+08:00",
+      "generatedAtLabel": "回填于 2026-11-11",
+      "reportDate": "2026-11-11",
+      "stats": {
+        "updates": 4,
+        "industry": 2,
+        "papers": 0,
+        "trends": 0
       },
       "entries": [
         {
@@ -363,45 +606,6 @@
           ]
         },
         {
-          "category": "updates",
-          "source": "OpenAI",
-          "date": "2026-11-11",
-          "tag": "原文复核",
-          "tagClass": "tag-safety",
-          "title": "Control Room 的停止机制得到确认",
-          "summary": "研究工作负载收到停止指令后，最多 35 秒内阻断后续模型输出；控制服务故障时拒绝推理。适用范围是 OpenAI 自身研究基础设施。",
-          "url": "https://openai.com/index/control-room/",
-          "linkLabel": "OpenAI 原始说明",
-          "search": "openai control room 35 秒 fail closed 停止 推理 研究 安全",
-          "framework": "5W2H",
-          "details": [
-            {
-              "label": "发生了什么",
-              "value": "研究工作负载收到停止指令后，最多 35 秒内阻断后续模型输出；控制服务故障时拒绝推理。适用范围是 OpenAI 自身研究基础设施。"
-            },
-            {
-              "label": "谁 / 面向谁",
-              "value": "OpenAI，主要影响与该条目同类的开发者、产品或业务团队。"
-            },
-            {
-              "label": "何时与阶段",
-              "value": "来源日期为 2026-11-11；当前条目按其页面标注的发布、预览或研究阶段理解。"
-            },
-            {
-              "label": "为什么重要",
-              "value": "它提供了一个可观察的能力或产品变化，但影响仍取决于可用范围、稳定性和实际使用成本。"
-            },
-            {
-              "label": "证据边界",
-              "value": "详情以原始来源为准；厂商演示、预印本和单一案例不能替代独立验证。"
-            },
-            {
-              "label": "下一步",
-              "value": "围绕自己的任务做一次小范围、可回滚的验证，并记录效果、失败和人工介入。"
-            }
-          ]
-        },
-        {
           "category": "industry",
           "source": "Google DeepMind",
           "date": "2026-11-10",
@@ -441,165 +645,6 @@
           ]
         },
         {
-          "category": "papers",
-          "source": "arXiv · cs.AI",
-          "date": "2026-11-05",
-          "tag": "预印本",
-          "tagClass": "tag-paper",
-          "title": "Don't Blame The Preferences",
-          "summary": "在三个模型家族和三种测试中，作者发现讨好倾向在监督微调阶段已较明显。启示是训练数据和早期阶段也要检查，而不只调整最终对齐。",
-          "url": "https://arxiv.org/abs/2611.10045",
-          "linkLabel": "论文摘要",
-          "search": "论文 sycophancy 讨好 偏好对齐 rlhf dpo 监督微调 sft 数据",
-          "framework": "论文五问",
-          "details": [
-            {
-              "label": "研究问题",
-              "value": "论文试图回答：Don't Blame The Preferences 所对应的具体问题是什么？"
-            },
-            {
-              "label": "方法",
-              "value": "在三个模型家族和三种测试中，作者发现讨好倾向在监督微调阶段已较明显。启示是训练数据和早期阶段也要检查，而不只调整最终对齐。"
-            },
-            {
-              "label": "结果",
-              "value": "结果来自论文作者报告的测试设置；比较时要同时看基线、样本量和评测条件。"
-            },
-            {
-              "label": "边界",
-              "value": "这是预印本，不能把作者报告的结果当成已被独立复现的普遍规律。"
-            },
-            {
-              "label": "应用",
-              "value": "先在自己的历史数据或回归任务上复测一个最小版本，确认收益是否覆盖新增复杂度。"
-            }
-          ]
-        },
-        {
-          "category": "papers",
-          "source": "arXiv · cs.SE",
-          "date": "2026-11-06",
-          "tag": "预印本",
-          "tagClass": "tag-paper",
-          "title": "Longtail-SWE 为 13 种少见语言补充代码修复评测",
-          "summary": "论文整理 202 个真实仓库任务，并用求解、裁判检查和修订任务的流程减少题目描述与测试缺陷。重点是补充评测覆盖，不是宣称模型整体变强。",
-          "url": "https://arxiv.org/abs/2611.10304",
-          "linkLabel": "论文摘要",
-          "search": "论文 longtail swe 代码 agent 多语言 编程语言 基准 仓库 修复 测试",
-          "framework": "论文五问",
-          "details": [
-            {
-              "label": "研究问题",
-              "value": "论文试图回答：Longtail-SWE 为 13 种少见语言补充代码修复评测 所对应的具体问题是什么？"
-            },
-            {
-              "label": "方法",
-              "value": "论文整理 202 个真实仓库任务，并用求解、裁判检查和修订任务的流程减少题目描述与测试缺陷。重点是补充评测覆盖，不是宣称模型整体变强。"
-            },
-            {
-              "label": "结果",
-              "value": "结果来自论文作者报告的测试设置；比较时要同时看基线、样本量和评测条件。"
-            },
-            {
-              "label": "边界",
-              "value": "这是预印本，不能把作者报告的结果当成已被独立复现的普遍规律。"
-            },
-            {
-              "label": "应用",
-              "value": "先在自己的历史数据或回归任务上复测一个最小版本，确认收益是否覆盖新增复杂度。"
-            }
-          ]
-        },
-        {
-          "category": "papers",
-          "source": "arXiv · cs.AI",
-          "date": "2026-11-09",
-          "tag": "预印本",
-          "tagClass": "tag-paper",
-          "title": "Sage-Taiyi 尝试让科研 Agent 跟踪证据与未解问题",
-          "summary": "作者报告其在 265 个科学构想任务上超过所测基线，并展示五项专家指导合作实验。榜单与化学结果仍是预印本作者报告，实验范围有限。",
-          "url": "https://arxiv.org/abs/2611.12762",
-          "linkLabel": "论文摘要",
-          "search": "论文 sage taiyi 科学发现 agent 假设 证据 实验 化学 产率",
-          "framework": "论文五问",
-          "details": [
-            {
-              "label": "研究问题",
-              "value": "论文试图回答：Sage-Taiyi 尝试让科研 Agent 跟踪证据与未解问题 所对应的具体问题是什么？"
-            },
-            {
-              "label": "方法",
-              "value": "作者报告其在 265 个科学构想任务上超过所测基线，并展示五项专家指导合作实验。榜单与化学结果仍是预印本作者报告，实验范围有限。"
-            },
-            {
-              "label": "结果",
-              "value": "结果来自论文作者报告的测试设置；比较时要同时看基线、样本量和评测条件。"
-            },
-            {
-              "label": "边界",
-              "value": "这是预印本，不能把作者报告的结果当成已被独立复现的普遍规律。"
-            },
-            {
-              "label": "应用",
-              "value": "先在自己的历史数据或回归任务上复测一个最小版本，确认收益是否覆盖新增复杂度。"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "date": "2026-11-10",
-      "label": "11月10日",
-      "relative": "前一天",
-      "generatedAt": "2026-11-10T23:39:00+08:00",
-      "generatedAtLabel": "2026-11-10 23:39（北京时间）",
-      "stats": {
-        "updates": 3,
-        "industry": 2,
-        "papers": 3,
-        "trends": 0
-      },
-      "entries": [
-        {
-          "category": "updates",
-          "source": "Anthropic",
-          "date": "2026-11-09",
-          "tag": "模型发布",
-          "tagClass": "tag-company",
-          "title": "Claude Fable 5.2 与 Claude Mythos 5.2",
-          "summary": "Anthropic 将同一底层模型分为面向普遍用户的 Fable 和面向经过验证机构的 Mythos；页面确认日期，但未显示具体发布时间。",
-          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
-          "linkLabel": "Anthropic 发布说明",
-          "search": "anthropic claude fable mythos 5.2 网络安全 生物研究 模型",
-          "framework": "5W2H",
-          "details": [
-            {
-              "label": "发生了什么",
-              "value": "Anthropic 将同一底层模型分为面向普遍用户的 Fable 和面向经过验证机构的 Mythos；页面确认日期，但未显示具体发布时间。"
-            },
-            {
-              "label": "谁 / 面向谁",
-              "value": "Anthropic，主要影响与该条目同类的开发者、产品或业务团队。"
-            },
-            {
-              "label": "何时与阶段",
-              "value": "来源日期为 2026-11-09；当前条目按其页面标注的发布、预览或研究阶段理解。"
-            },
-            {
-              "label": "为什么重要",
-              "value": "它提供了一个可观察的能力或产品变化，但影响仍取决于可用范围、稳定性和实际使用成本。"
-            },
-            {
-              "label": "证据边界",
-              "value": "详情以原始来源为准；厂商演示、预印本和单一案例不能替代独立验证。"
-            },
-            {
-              "label": "下一步",
-              "value": "围绕自己的任务做一次小范围、可回滚的验证，并记录效果、失败和人工介入。"
-            }
-          ]
-        },
-        {
           "category": "updates",
           "source": "Google DeepMind",
           "date": "2026-11-10",
@@ -623,45 +668,6 @@
             {
               "label": "何时与阶段",
               "value": "来源日期为 2026-11-10；当前条目按其页面标注的发布、预览或研究阶段理解。"
-            },
-            {
-              "label": "为什么重要",
-              "value": "它提供了一个可观察的能力或产品变化，但影响仍取决于可用范围、稳定性和实际使用成本。"
-            },
-            {
-              "label": "证据边界",
-              "value": "详情以原始来源为准；厂商演示、预印本和单一案例不能替代独立验证。"
-            },
-            {
-              "label": "下一步",
-              "value": "围绕自己的任务做一次小范围、可回滚的验证，并记录效果、失败和人工介入。"
-            }
-          ]
-        },
-        {
-          "category": "updates",
-          "source": "OpenAI",
-          "date": "2026-11-09",
-          "tag": "待核线索",
-          "tagClass": "tag-safety",
-          "title": "Control Room 首次出现在 OpenAI 新闻索引",
-          "summary": "当日报告记录了搜索索引线索，正文当时受 Cloudflare 限制；该线索已在 11 月 11 日通过原始页面复核。",
-          "url": "https://openai.com/index/control-room/",
-          "linkLabel": "后续已核实的原始说明",
-          "search": "openai control room search index workload stop",
-          "framework": "5W2H",
-          "details": [
-            {
-              "label": "发生了什么",
-              "value": "当日报告记录了搜索索引线索，正文当时受 Cloudflare 限制；该线索已在 11 月 11 日通过原始页面复核。"
-            },
-            {
-              "label": "谁 / 面向谁",
-              "value": "OpenAI，主要影响与该条目同类的开发者、产品或业务团队。"
-            },
-            {
-              "label": "何时与阶段",
-              "value": "来源日期为 2026-11-09；当前条目按其页面标注的发布、预览或研究阶段理解。"
             },
             {
               "label": "为什么重要",
@@ -713,6 +719,135 @@
             {
               "label": "可复用做法",
               "value": "先选可回滚的小范围流程，记录成功率、延迟、人工介入和异常类型，再决定是否扩大。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-11-09",
+      "label": "11月09日",
+      "relative": "历史回填",
+      "generatedAt": "2026-11-12T09:00:00+08:00",
+      "generatedAtLabel": "历史回填于 2026-11-12",
+      "reportDate": "2026-11-09",
+      "stats": {
+        "updates": 2,
+        "industry": 1,
+        "papers": 4,
+        "trends": 0
+      },
+      "entries": [
+        {
+          "category": "papers",
+          "source": "arXiv · cs.AI",
+          "date": "2026-11-09",
+          "tag": "预印本",
+          "tagClass": "tag-paper",
+          "title": "Sage-Taiyi 尝试让科研 Agent 跟踪证据与未解问题",
+          "summary": "作者报告其在 265 个科学构想任务上超过所测基线，并展示五项专家指导合作实验。榜单与化学结果仍是预印本作者报告，实验范围有限。",
+          "url": "https://arxiv.org/abs/2611.12762",
+          "linkLabel": "论文摘要",
+          "search": "论文 sage taiyi 科学发现 agent 假设 证据 实验 化学 产率",
+          "framework": "论文五问",
+          "details": [
+            {
+              "label": "研究问题",
+              "value": "论文试图回答：Sage-Taiyi 尝试让科研 Agent 跟踪证据与未解问题 所对应的具体问题是什么？"
+            },
+            {
+              "label": "方法",
+              "value": "作者报告其在 265 个科学构想任务上超过所测基线，并展示五项专家指导合作实验。榜单与化学结果仍是预印本作者报告，实验范围有限。"
+            },
+            {
+              "label": "结果",
+              "value": "结果来自论文作者报告的测试设置；比较时要同时看基线、样本量和评测条件。"
+            },
+            {
+              "label": "边界",
+              "value": "这是预印本，不能把作者报告的结果当成已被独立复现的普遍规律。"
+            },
+            {
+              "label": "应用",
+              "value": "先在自己的历史数据或回归任务上复测一个最小版本，确认收益是否覆盖新增复杂度。"
+            }
+          ]
+        },
+        {
+          "category": "updates",
+          "source": "Anthropic",
+          "date": "2026-11-09",
+          "tag": "模型发布",
+          "tagClass": "tag-company",
+          "title": "Claude Fable 5.2 与 Claude Mythos 5.2",
+          "summary": "Anthropic 将同一底层模型分为面向普遍用户的 Fable 和面向经过验证机构的 Mythos；页面确认日期，但未显示具体发布时间。",
+          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
+          "linkLabel": "Anthropic 发布说明",
+          "search": "anthropic claude fable mythos 5.2 网络安全 生物研究 模型",
+          "framework": "5W2H",
+          "details": [
+            {
+              "label": "发生了什么",
+              "value": "Anthropic 将同一底层模型分为面向普遍用户的 Fable 和面向经过验证机构的 Mythos；页面确认日期，但未显示具体发布时间。"
+            },
+            {
+              "label": "谁 / 面向谁",
+              "value": "Anthropic，主要影响与该条目同类的开发者、产品或业务团队。"
+            },
+            {
+              "label": "何时与阶段",
+              "value": "来源日期为 2026-11-09；当前条目按其页面标注的发布、预览或研究阶段理解。"
+            },
+            {
+              "label": "为什么重要",
+              "value": "它提供了一个可观察的能力或产品变化，但影响仍取决于可用范围、稳定性和实际使用成本。"
+            },
+            {
+              "label": "证据边界",
+              "value": "详情以原始来源为准；厂商演示、预印本和单一案例不能替代独立验证。"
+            },
+            {
+              "label": "下一步",
+              "value": "围绕自己的任务做一次小范围、可回滚的验证，并记录效果、失败和人工介入。"
+            }
+          ]
+        },
+        {
+          "category": "updates",
+          "source": "OpenAI",
+          "date": "2026-11-09",
+          "tag": "待核线索",
+          "tagClass": "tag-safety",
+          "title": "Control Room 首次出现在 OpenAI 新闻索引",
+          "summary": "当日报告记录了搜索索引线索，正文当时受 Cloudflare 限制；该线索已在 11 月 11 日通过原始页面复核。",
+          "url": "https://openai.com/index/control-room/",
+          "linkLabel": "后续已核实的原始说明",
+          "search": "openai control room search index workload stop",
+          "framework": "5W2H",
+          "details": [
+            {
+              "label": "发生了什么",
+              "value": "当日报告记录了搜索索引线索，正文当时受 Cloudflare 限制；该线索已在 11 月 11 日通过原始页面复核。"
+            },
+            {
+              "label": "谁 / 面向谁",
+              "value": "OpenAI，主要影响与该条目同类的开发者、产品或业务团队。"
+            },
+            {
+              "label": "何时与阶段",
+              "value": "来源日期为 2026-11-09；当前条目按其页面标注的发布、预览或研究阶段理解。"
+            },
+            {
+              "label": "为什么重要",
+              "value": "它提供了一个可观察的能力或产品变化，但影响仍取决于可用范围、稳定性和实际使用成本。"
+            },
+            {
+              "label": "证据边界",
+              "value": "详情以原始来源为准；厂商演示、预印本和单一案例不能替代独立验证。"
+            },
+            {
+              "label": "下一步",
+              "value": "围绕自己的任务做一次小范围、可回滚的验证，并记录效果、失败和人工介入。"
             }
           ]
         },
@@ -863,147 +998,90 @@
       ]
     },
     {
-      "date": "2026-11-09",
-      "label": "11月9日",
+      "date": "2026-11-06",
+      "label": "11月06日",
       "relative": "历史回填",
-      "generatedAt": "2026-11-12T09:00:00+08:00",
-      "generatedAtLabel": "历史回填于 2026-11-12",
+      "generatedAt": "2026-11-11T08:40:00+08:00",
+      "generatedAtLabel": "回填于 2026-11-11",
+      "reportDate": "2026-11-11",
       "stats": {
-        "updates": 1,
+        "updates": 0,
         "industry": 0,
-        "papers": 3,
+        "papers": 1,
         "trends": 0
       },
       "entries": [
         {
-          "category": "updates",
-          "source": "Anthropic",
-          "date": "2026-11-09",
-          "tag": "模型发布",
-          "tagClass": "tag-company",
-          "title": "Claude Fable 5.2 与 Claude Mythos 5.2",
-          "summary": "Anthropic 公布两种产品形态：Fable 面向普遍用户，Mythos 面向通过验证的网络安全或生命科学机构。具体发布时间未在页面显示。",
-          "url": "https://www.anthropic.com/claude-fable-and-mythos-5-2",
-          "linkLabel": "Anthropic 发布说明",
-          "search": "anthropic claude fable mythos 5.2 模型",
-          "framework": "5W2H",
-          "details": [
-            {
-              "label": "发生了什么",
-              "value": "Anthropic 公布两种产品形态：Fable 面向普遍用户，Mythos 面向通过验证的网络安全或生命科学机构。具体发布时间未在页面显示。"
-            },
-            {
-              "label": "谁 / 面向谁",
-              "value": "Anthropic，主要影响与该条目同类的开发者、产品或业务团队。"
-            },
-            {
-              "label": "何时与阶段",
-              "value": "来源日期为 2026-11-09；当前条目按其页面标注的发布、预览或研究阶段理解。"
-            },
-            {
-              "label": "为什么重要",
-              "value": "它提供了一个可观察的能力或产品变化，但影响仍取决于可用范围、稳定性和实际使用成本。"
-            },
-            {
-              "label": "证据边界",
-              "value": "详情以原始来源为准；厂商演示、预印本和单一案例不能替代独立验证。"
-            },
-            {
-              "label": "下一步",
-              "value": "围绕自己的任务做一次小范围、可回滚的验证，并记录效果、失败和人工介入。"
-            }
-          ]
-        },
-        {
-          "category": "papers",
-          "source": "arXiv · cs.AI",
-          "date": "2026-11-09",
-          "tag": "预印本",
-          "tagClass": "tag-paper",
-          "title": "System Optimizations for Cost-Efficient Agent Harnesses",
-          "summary": "论文研究如何优化 Agent 的工具、上下文和调用编排；作者报告在部分任务上最高降低 35% 成本，准确率未下降的结论仍待独立复现。",
-          "url": "https://arxiv.org/abs/2611.12122",
-          "linkLabel": "论文摘要",
-          "search": "agent harness cost efficient 优化 成本",
-          "framework": "论文五问",
-          "details": [
-            {
-              "label": "研究问题",
-              "value": "论文试图回答：System Optimizations for Cost-Efficient Agent Harnesses 所对应的具体问题是什么？"
-            },
-            {
-              "label": "方法",
-              "value": "论文研究如何优化 Agent 的工具、上下文和调用编排；作者报告在部分任务上最高降低 35% 成本，准确率未下降的结论仍待独立复现。"
-            },
-            {
-              "label": "结果",
-              "value": "结果来自论文作者报告的测试设置；比较时要同时看基线、样本量和评测条件。"
-            },
-            {
-              "label": "边界",
-              "value": "这是预印本，不能把作者报告的结果当成已被独立复现的普遍规律。"
-            },
-            {
-              "label": "应用",
-              "value": "先在自己的历史数据或回归任务上复测一个最小版本，确认收益是否覆盖新增复杂度。"
-            }
-          ]
-        },
-        {
-          "category": "papers",
-          "source": "arXiv · cs.AI",
-          "date": "2026-11-09",
-          "tag": "预印本",
-          "tagClass": "tag-paper",
-          "title": "AutoBuddy：评测常驻 Agent 如何发现和执行任务",
-          "summary": "论文用模拟职场数据测试 Agent 从邮件、聊天和文件中发现待办，再在业务系统完成操作；发现任务和执行任务需要分开衡量。",
-          "url": "https://arxiv.org/abs/2611.12393",
-          "linkLabel": "论文摘要",
-          "search": "autobuddy agent task discovery execution",
-          "framework": "论文五问",
-          "details": [
-            {
-              "label": "研究问题",
-              "value": "论文试图回答：AutoBuddy：评测常驻 Agent 如何发现和执行任务 所对应的具体问题是什么？"
-            },
-            {
-              "label": "方法",
-              "value": "论文用模拟职场数据测试 Agent 从邮件、聊天和文件中发现待办，再在业务系统完成操作；发现任务和执行任务需要分开衡量。"
-            },
-            {
-              "label": "结果",
-              "value": "结果来自论文作者报告的测试设置；比较时要同时看基线、样本量和评测条件。"
-            },
-            {
-              "label": "边界",
-              "value": "这是预印本，不能把作者报告的结果当成已被独立复现的普遍规律。"
-            },
-            {
-              "label": "应用",
-              "value": "先在自己的历史数据或回归任务上复测一个最小版本，确认收益是否覆盖新增复杂度。"
-            }
-          ]
-        },
-        {
           "category": "papers",
           "source": "arXiv · cs.SE",
-          "date": "2026-11-09",
+          "date": "2026-11-06",
           "tag": "预印本",
           "tagClass": "tag-paper",
-          "title": "Let the Fixer Decide：训练代码定位器寻找有用上下文",
-          "summary": "作者让修复模型给候选文件组合打分，再训练定位器缩小代码阅读范围；论文结果规模有限，适合先在历史缺陷集上验证。",
-          "url": "https://arxiv.org/abs/2611.12164",
+          "title": "Longtail-SWE 为 13 种少见语言补充代码修复评测",
+          "summary": "论文整理 202 个真实仓库任务，并用求解、裁判检查和修订任务的流程减少题目描述与测试缺陷。重点是补充评测覆盖，不是宣称模型整体变强。",
+          "url": "https://arxiv.org/abs/2611.10304",
           "linkLabel": "论文摘要",
-          "search": "code localizer fixer likelihood context repair agent",
+          "search": "论文 longtail swe 代码 agent 多语言 编程语言 基准 仓库 修复 测试",
           "framework": "论文五问",
           "details": [
             {
               "label": "研究问题",
-              "value": "论文试图回答：Let the Fixer Decide：训练代码定位器寻找有用上下文 所对应的具体问题是什么？"
+              "value": "论文试图回答：Longtail-SWE 为 13 种少见语言补充代码修复评测 所对应的具体问题是什么？"
             },
             {
               "label": "方法",
-              "value": "作者让修复模型给候选文件组合打分，再训练定位器缩小代码阅读范围；论文结果规模有限，适合先在历史缺陷集上验证。"
+              "value": "论文整理 202 个真实仓库任务，并用求解、裁判检查和修订任务的流程减少题目描述与测试缺陷。重点是补充评测覆盖，不是宣称模型整体变强。"
+            },
+            {
+              "label": "结果",
+              "value": "结果来自论文作者报告的测试设置；比较时要同时看基线、样本量和评测条件。"
+            },
+            {
+              "label": "边界",
+              "value": "这是预印本，不能把作者报告的结果当成已被独立复现的普遍规律。"
+            },
+            {
+              "label": "应用",
+              "value": "先在自己的历史数据或回归任务上复测一个最小版本，确认收益是否覆盖新增复杂度。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "date": "2026-11-05",
+      "label": "11月05日",
+      "relative": "历史回填",
+      "generatedAt": "2026-11-11T08:40:00+08:00",
+      "generatedAtLabel": "回填于 2026-11-11",
+      "reportDate": "2026-11-11",
+      "stats": {
+        "updates": 0,
+        "industry": 0,
+        "papers": 1,
+        "trends": 0
+      },
+      "entries": [
+        {
+          "category": "papers",
+          "source": "arXiv · cs.AI",
+          "date": "2026-11-05",
+          "tag": "预印本",
+          "tagClass": "tag-paper",
+          "title": "Don't Blame The Preferences",
+          "summary": "在三个模型家族和三种测试中，作者发现讨好倾向在监督微调阶段已较明显。启示是训练数据和早期阶段也要检查，而不只调整最终对齐。",
+          "url": "https://arxiv.org/abs/2611.10045",
+          "linkLabel": "论文摘要",
+          "search": "论文 sycophancy 讨好 偏好对齐 rlhf dpo 监督微调 sft 数据",
+          "framework": "论文五问",
+          "details": [
+            {
+              "label": "研究问题",
+              "value": "论文试图回答：Don't Blame The Preferences 所对应的具体问题是什么？"
+            },
+            {
+              "label": "方法",
+              "value": "在三个模型家族和三种测试中，作者发现讨好倾向在监督微调阶段已较明显。启示是训练数据和早期阶段也要检查，而不只调整最终对齐。"
             },
             {
               "label": "结果",

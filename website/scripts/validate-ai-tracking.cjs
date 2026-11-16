@@ -29,7 +29,7 @@ function dateOffset(date, offset) {
   return value.toISOString().slice(0, 10)
 }
 
-function validateReports(reportsDir, latestTimelineDate, errors) {
+function validateReports(reportsDir, latestTimelineDate, errors, warnings) {
   if (!reportsDir) return
   const reportFiles = fs.readdirSync(reportsDir).filter((file) => /^\d{4}-\d{2}-\d{2}\.md$/.test(file)).sort()
   if (reportFiles.length === 0) {
@@ -37,7 +37,8 @@ function validateReports(reportsDir, latestTimelineDate, errors) {
     return
   }
   const latestReportDate = reportFiles.at(-1).slice(0, 10)
-  if (latestReportDate !== latestTimelineDate) errors.push(`latest report ${latestReportDate} does not match timeline ${latestTimelineDate}`)
+  if (latestTimelineDate > latestReportDate) errors.push(`timeline content date ${latestTimelineDate} is newer than latest report ${latestReportDate}`)
+  if (latestTimelineDate < latestReportDate) warnings.push(`timeline content through ${latestTimelineDate}; latest report is ${latestReportDate} (historical backfill is allowed)`)
   const latestReport = fs.readFileSync(path.join(reportsDir, reportFiles.at(-1)), 'utf8')
   const cutoff = latestReport.match(/内容截止时间：\*\*\s*(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2}:\d{2})（Asia\/Shanghai）/)
   const legacyCutoff = latestReport.match(/检索截止时间\s*\|\s*(\d{4}-\d{2}-\d{2})\s+(\d{2}:\d{2})（Asia\/Shanghai）/)
@@ -83,7 +84,7 @@ if (timeline) {
   const result = validateTimeline(timeline, { strictDetails })
   errors.push(...result.errors)
   warnings.push(...result.warnings)
-  if (timeline.days?.[0]?.date) validateReports(reportsDir, timeline.days[0].date, errors)
+  if (timeline.days?.[0]?.date) validateReports(reportsDir, timeline.days[0].date, errors, warnings)
 }
 
 if (!fs.existsSync(scriptPath)) errors.push(`missing tracking script: ${scriptPath}`)

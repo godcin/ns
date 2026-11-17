@@ -9,6 +9,7 @@ const timelineFlag = process.argv.indexOf('--timeline')
 const timelineValue = timelineFlag === -1 ? null : process.argv[timelineFlag + 1]
 const timelinePath = path.resolve(timelineValue || path.join(repoRoot, 'website/ai-tracking/timeline.json'))
 const dryRun = process.argv.includes('--dry-run')
+const refreshDetails = process.argv.includes('--refresh-details')
 const data = JSON.parse(fs.readFileSync(timelinePath, 'utf8'))
 let changed = 0
 
@@ -17,7 +18,7 @@ data.days.forEach((day) => day.entries.forEach((entry) => {
     entry.framework = frameworkFor(entry)
     changed += 1
   }
-  if (!Array.isArray(entry.details) || entry.details.length === 0) {
+  if (refreshDetails || !Array.isArray(entry.details) || entry.details.length === 0) {
     entry.details = detailsFor(entry)
     changed += 1
   }
